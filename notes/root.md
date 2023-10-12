@@ -1,13 +1,19 @@
 ---
-id: da0ts1cvvtyc45i9j4vocum
-title: Root
+id: 0uuk3cixqkxat0xqh4cm542
+title: Welcome to Juian's Note
 desc: ''
-updated: 1697107345950
-created: 1697107345950
+updated: 1697115192196
+created: 1697115085580
 ---
-# Welcome to Dendron
 
-This is the root of your dendron vault. If you decide to publish your entire vault, this will be your landing page. You are free to customize any part of this page except the frontmatter on top.
+This is my personal knowledge base. It is built using [Dendron](https://wiki.dendron.so/).
+
+這會是中英文夾雜的知識庫
+
+包含
+ - 一些讀書心得
+ - 一些個人筆記
+ - 一些 leetcode 的解題心得
 
 ## Lookup
 
