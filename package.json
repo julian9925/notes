@@ -1,0 +1,11 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/julian9925/notes.git",
+  "author": "Julian Chen <julian9925@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@dendronhq/dendron-cli": "^0.106.0"
+  }
+}
