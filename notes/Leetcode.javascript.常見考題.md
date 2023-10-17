@@ -1,8 +1,8 @@
 ---
 id: 3ahlijb0qehzw5tup2qtqbd
-title: JavaScript 考題
+title: 常見考題
 desc: ''
-updated: 1697424161165
+updated: 1697533246095
 created: 1697423855968
 ---
 
@@ -189,6 +189,62 @@ var areDeeplyEqual = function(o1, o2) {
   return true;
 };
 
+```
+## [2636. Promise Pool](https://leetcode.com/problems/promise-pool/description/)
+
+思路：
+因為 functions 不能用 iteration 的方式，所以用遞迴的方式，每次都把 functions 的第一個 function 執行，並且把剩下的 functions 傳遞給下一次的遞迴
+
+1. 寫出 helper 目的讓 array 用 shift 出第一個 function，並且把剩下的 functions 傳遞給下一次的 helper 遞迴
+2. 將 functions 轉成長度為 function 長度的 array 重複執行 helper
+3. return new Promise.all 結果
+
+```javascript
+type F = () => Promise<any>;
+
+function promisePool(functions: F[], n: number): Promise<any> {
+  async function evaluateFunction(): Promise<any> {
+    if (functions.length > 0) {
+      let f = functions.shift();
+      if (f) {
+        await f();
+        await evaluateFunction();
+      }
+    }
+
+    return;
+  }
+
+  let promises = Array(n).fill(0).map(() => evaluateFunction());
+  return Promise.all(promises);
+};
+```
+
+
+## [2625. Flatten Deeply Nested Array](https://leetcode.com/problems/flatten-deeply-nested-array/description/)
+
+思路：
+1. 輪詢 array
+2. 利用遞迴，如果是 array 就繼續遞迴，如果不是就 push 到 result
+3. n 層解構，每呼叫一自己，n 就減一，直到 n 為 0，就不再遞迴
+4. 如果不是 array 就 push 到 result
+
+```javascript
+type MultiDimensionalArray = (number | MultiDimensionalArray)[];
+
+var flat = function (arr: MultiDimensionalArray, n: number): MultiDimensionalArray {
+	let res: MultiDimensionalArray = [];
+
+	for(let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i]) && n > 0) {
+      res.push(...flat(arr[i] as MultiDimensionalArray, n -1));
+    } else {
+      res.push(arr[i]);
+    }
+  }
+    
+	return res;
+};
 ```
 
 #leetcode #javascript
