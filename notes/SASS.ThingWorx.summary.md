@@ -2,23 +2,23 @@
 id: 7r5iumr1gtuyikis6je11rz
 title: Summary
 desc: 'ThingWorx Document Summary'
-updated: 1699326965165
+updated: 1699328008654
 created: 1699320581058
 ---
 
 # Day 1 Intorduction
 
-## Overview
+## 1. Overview
   For application development through modeling rather than coding, focusing on agility and application composition.
 
-## Advantage
+## 2. Advantage
   The platform offers benefits such as faster time to market, simplicity, a single platform for development, and built-in analytics.
 	
-## Following ISA S95 Model
+## 3. Following ISA S95 Model
 ![](/assets/ISA-S95-architecture.png)
 
 
-## ThingWorx Capabilities
+## 4. ThingWorx Capabilities
 - Role-based consoles
 - Language translation services
 - Pre-built extensions
@@ -29,7 +29,7 @@ created: 1699320581058
 - SSO for third-party applications
 - Easy access to AR/VR technology via Vuforia studio
 
-## ThingWorx Prerequisites
+## 5. ThingWorx Prerequisites
  - Compiler
    - JDK
 	
@@ -47,7 +47,7 @@ created: 1699320581058
 	 - SAP HANA
 	 - DataStax Enterprise
 
-## Models in ThingWorx
+## 6. Models in ThingWorx
   -  modeling
 	- analytics
 	- visualization
@@ -56,7 +56,7 @@ created: 1699320581058
 	- security
 	- system management
 
-## ThingWorx Composer 
+## 7. ThingWorx Composer 
   - Integrated development environment (IDE) for creating ThingWorx applications, with both data modeling and user interface development capabilities.
 
 - IDE snapshot
@@ -87,7 +87,7 @@ created: 1699320581058
 
 
 
-## Kepware server with ThingWorx
+## 8. Kepware server with ThingWorx
 ![](/assets/kepware-service.png)
 
 - Kepware advantages
@@ -101,7 +101,7 @@ created: 1699320581058
 
 # Day 2 Thingworx modeling/visualization
 
-## Modeling
+## 1. Modeling
 - Create a sample Thing
 - Configure your Thing to connect the Database
 - Write a sample service to fetch a table from database
@@ -109,7 +109,7 @@ created: 1699320581058
 
 
 
-## Create Thing and connect to Database
+## 2. Create Thing and connect to Database
 
 ### **connect to database**
 
