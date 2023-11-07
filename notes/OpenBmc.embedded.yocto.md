@@ -2,7 +2,7 @@
 id: vwhv555f54cvwxj7cpob0zj
 title: Yocto elements
 desc: ''
-updated: 1698890453307
+updated: 1698895807215
 created: 1698887426299
 ---
 
@@ -57,6 +57,11 @@ created: 1698887426299
 	- The Yocto Project layer infrastructure groups related functionality into separate bundles.
 	You can incrementally add these grouped functionalities to your project as needed
 	Allows you to easily extend the system, make customizations, and keep functionality organized.
+
+## Metadata
+
+Metadata refers to the build instructions
+Commands and data used to indicate waht versions of software are used
 
 
 ---
