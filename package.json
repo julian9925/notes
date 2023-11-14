@@ -5,7 +5,10 @@
   "repository": "https://github.com/julian9925/notes.git",
   "author": "Julian Chen <julian9925@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dendron": "dendron-cli"
+  },
   "dependencies": {
-    "@dendronhq/dendron-cli": "^0.106.0"
+    "@dendronhq/dendron-cli": "^0.116.2"
   }
 }
