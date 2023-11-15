@@ -2,7 +2,7 @@
 id: vwhv555f54cvwxj7cpob0zj
 title: Yocto elements
 desc: ''
-updated: 1698895807215
+updated: 1700019757379
 created: 1698887426299
 ---
 
@@ -58,15 +58,10 @@ created: 1698887426299
 	You can incrementally add these grouped functionalities to your project as needed
 	Allows you to easily extend the system, make customizations, and keep functionality organized.
 
-## Metadata
-
-Metadata refers to the build instructions
-Commands and data used to indicate waht versions of software are used
-
-
----
 
 ## Pocky
+
+
 - Pocky is a reference distribution of Yocto Project. The word "reference" is used to mean "example" in this context.
 
 - Yocto project use Poky to build image (Kernel, system, and application software) for targeted hardware.
@@ -77,8 +72,80 @@ Commands and data used to indicate waht versions of software are used
  	- meta-yocto-bsp
  	- Documentation
 
+> Note: Poky = Bitbake + Metadata
+
 > Note: Poky does not contain binary files,it is a working example of how to build your own custom Linux distribution from source.
 
 ### What is difference between poky and Yocto
 
 - The exact difference between Yocto and Poky is Yocto refers to the organization ( like one would refer to 'canonical', the company behind Ubuntu ), and Poky refers to the actual bits downloaded ( analogous to 'Ubuntu' )
+
+
+## Metadata
+
+- Metadata is collection of
+  - Configuration files (.conf)
+	- Recipes (.bb and .bbappend)
+	- Classes (.bbclass)
+	- Include files (.inc)
+
+## Recipes
+
+- Non-Yocto: A receipe is a set of instructions that describe how to prepare or make something, especially a culinary dish.
+- Yocto: A recipe is a set of instructions that is read and processed by the bitbake.
+
+- Extension od receipe: .bb
+
+- A Receipe describes:
+	- Where to find the source code
+	- Which patches to apply
+	- Configuration options (Library dependencies, compiler flags, etc)
+	- Install
+	- License
+
+- Example of a recipe:
+	- `dhcp_4.4.1.bb`
+	- `gstreamer1.0_1.16.1.bb`
+
+## Configuration Files
+
+- Files which hold global definitions of varaiables and hardware configuration information.
+- They tell bitbake how to build the software and put into the image to support a specific hardware platform.
+- Extension of configuration files: .conf
+
+- Types:
+  - Machine configuration files
+	- Distribution configuration options
+	- Compiler tuning options
+	- General Common Configuration Options
+	- USer Configuration Optiopns (local.conf)
+
+## Classes
+
+- Class files are used to abstract common functionality and share it among multiple recipes (.bb) files
+- To use a class, you simply make sure the receipe inherits the class.
+
+- Extension of class files: .bbclass
+
+- They are usually placed in classes directory inside the meta* directory.
+
+- Example of a classes:
+	- `cmake.bbclass` - Handles cmake in receipes
+	- `kernel.bbclass` - Handles buliding kernel. Contains code to build all kernel tree.
+	- `module.bbclass` - Provide support for building out-of-tree Linux Kernel Modules.
+
+## Layers
+
+- A layer is a collection of recipes.
+- A layer is a directory containing recipes, configuration files, classes, etc. (receipe containers)
+
+- Typical naming convention for layers: meta-<layer_name>
+
+- Poky has the following layers: 
+	- meta, meta-poky, meta-yocto-bsp, meta-selftest, meta-skeleton
+
+- Why Layers:
+  -  Layers provide a mechanism to isolate meta data according to functionality, for instance BSPs, distribution configuration, etc.
+
+	- For instance, you should have a BSP layer, a GUI layer, a distro configuration layer, middleware layer, or an application layer.
+	- Putting you entire build into one layer limits and complicates fureture customization and maintenance.
