@@ -1,8 +1,8 @@
 ---
 id: vwhv555f54cvwxj7cpob0zj
-title: Yocto elements
+title: Yocto Receipe elements
 desc: ''
-updated: 1700019757379
+updated: 1700036094501
 created: 1698887426299
 ---
 
@@ -85,9 +85,9 @@ created: 1698887426299
 
 - Metadata is collection of
   - Configuration files (.conf)
-	- Recipes (.bb and .bbappend)
-	- Classes (.bbclass)
-	- Include files (.inc)
+  - Recipes (.bb and .bbappend)
+  - Classes (.bbclass)
+  - Include files (.inc)
 
 ## Recipes
 
@@ -149,3 +149,42 @@ created: 1698887426299
 
 	- For instance, you should have a BSP layer, a GUI layer, a distro configuration layer, middleware layer, or an application layer.
 	- Putting you entire build into one layer limits and complicates fureture customization and maintenance.
+
+	- Example:
+		- meta-yocto-bsp   -- BSP metadata
+		- meta-pocky			 -- Distro metadata
+
+	- Layers allow you to easily add entire set of meta data and/or replace sets with other sets.
+
+	- meta-pocky, is itself a layer applied on top of the QE-Core metadata layer.
+
+## Which layers are used by Pocky build system?
+
+  BBLAYERS varaible in `build/conf/bblayers.conf` file lists the layers Bitbake tries to find.
+
+  If bblayers.conf file is not present when you start the build, the OpenEmbedded build system will create a default bblayers.conf.sample when you source the oe-init-build-env script.
+
+- command to find out whick layers are present in the build system:
+	- go to pocky directory
+	- `source ./oe-init-build-env`
+	- `bitbake-layers show-layers`
+
+## Image
+
+An image is the top level receipe, it has a description, a license and inherits from the core-image class.
+
+It is used alongside the machine definition, machine describes the hardware used and its capabilities
+
+Image is archecture agnostic and defines how the root filesystem is built, with the packages to include and the configuration to apply.
+
+ - Command to check the list of available images:
+	 - `ls meta*/recipes*/images/*.bb`
+
+## Package
+
+- A package is a software component that can be installed on a system. Such as file with name `*.rpm` ,`*.ipk` or `*.deb`
+
+- A single recipe can produce multiple packages. All pacakges that a receipe generated are listed in the receipe varaiable.
+
+- Example:
+	- `dhcp_4.4.1.bb` - dhcp, dhcp-client, dhcp-dev, dhcp-doc, dhcp-server
