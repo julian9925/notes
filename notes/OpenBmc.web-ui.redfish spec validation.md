@@ -1,6 +1,6 @@
 ---
 id: 127pwxt4f37fnl23g4kvwfh
-title: redfis spec validation
+title: redfish spec validation
 desc: ''
 updated: 1698797669324
 created: 1698706963724
