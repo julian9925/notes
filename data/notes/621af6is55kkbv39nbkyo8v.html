@@ -1,0 +1,80 @@
+<h1 id="eventpropogation">eventPropogation<a aria-hidden="true" class="anchor-heading icon-link" href="#eventpropogation"></a></h1>
+<h2 id="event-bubbleing-and-capturing-exection-order">event bubbleing and capturing exection order<a aria-hidden="true" class="anchor-heading icon-link" href="#event-bubbleing-and-capturing-exection-order"></a></h2>
+<p>Below is the html example</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>body</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>ul</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myList<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>Item 1<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>Item 2<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>li</span><span class="token punctuation">></span></span>Item 3<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>li</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> myList <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  myList<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">const</span> target <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">;</span>
+
+     <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">.</span><span class="token property-access">tagName</span> <span class="token operator">===</span> <span class="token string">'LI'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> backgroundColor <span class="token operator">=</span> target<span class="token punctuation">.</span><span class="token property-access">style</span><span class="token punctuation">.</span><span class="token property-access">backgroundColor</span><span class="token punctuation">;</span>
+        target<span class="token punctuation">.</span><span class="token property-access">style</span><span class="token punctuation">.</span><span class="token property-access">backgroundColor</span> <span class="token operator">=</span> backgroundColor <span class="token operator">===</span> <span class="token string">'yellow'</span> <span class="token operator">?</span> <span class="token string">''</span> <span class="token operator">:</span> <span class="token string">'yellow'</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>What is the order of execution of the event handlers?</p>
+<p>This is event bubbling. The order of execution is</p>
+<ol>
+<li>li -> alert('li')</li>
+<li>ul -> alert('ul')</li>
+</ol>
+<p>This is event capturing. Listenter is binded to the ul element.
+3. ul -> event handler change the background color of the li element</p>
+<ul>
+<li>
+<p>Event Capturing (or "Capturing Phase"): This phase is "top-down". It starts from the outermost element (typically the document object or the window object) and trickles down to the target element where the event actually occurred.</p>
+</li>
+<li>
+<p>Event Bubbling: This phase is "bottom-up". After the event has reached its target in the capturing phase, it starts to bubble up from the target element to the outermost element.</p>
+</li>
+</ul>
+<h2 id="stoppropagation-and-preventdefault">stopPropagation and preventDefault<a aria-hidden="true" class="anchor-heading icon-link" href="#stoppropagation-and-preventdefault"></a></h2>
+<p><code>stopPropagation</code> and <code>preventDefault</code> are both methods available on the event object in the DOM, but they serve different purposes. Here's a breakdown of their differences:</p>
+<h3 id="1-stoppropagation">1. <code>stopPropagation</code>:<a aria-hidden="true" class="anchor-heading icon-link" href="#1-stoppropagation"></a></h3>
+<ul>
+<li><strong>Purpose</strong>: To prevent the event from propagating (or traveling) through either the capturing or bubbling phases.</li>
+<li><strong>Effect</strong>:
+<ul>
+<li>In a bubbling phase: If an event handler on a child element calls <code>stopPropagation</code>, parent elements will not be notified of the event.</li>
+<li>In a capturing phase: If an event handler on a parent element calls <code>stopPropagation</code>, child elements will not receive that event during the capturing phase.</li>
+</ul>
+</li>
+<li><strong>Common Use Cases</strong>: 
+<ul>
+<li>When you want to ensure that only a specific element handles the event and you don't want parent (or child, in capturing mode) elements to know about it.</li>
+<li>When nested components might have conflicting event handlers, and you want to ensure only one of them is executed.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-preventdefault">2. <code>preventDefault</code>:<a aria-hidden="true" class="anchor-heading icon-link" href="#2-preventdefault"></a></h3>
+<ul>
+<li><strong>Purpose</strong>: To prevent the browser's default behavior associated with the event.</li>
+<li><strong>Effect</strong>: Stops the default action associated with the event from occurring. For example:
+<ul>
+<li>Clicking a link: By default, it navigates to the link's href. Using <code>preventDefault</code> will stop the navigation.</li>
+<li>Submitting a form: By default, it sends the form data to the server. Using <code>preventDefault</code> will stop the form submission.</li>
+</ul>
+</li>
+<li><strong>Common Use Cases</strong>: 
+<ul>
+<li>When you want to replace the default behavior with custom behavior. For instance, you might want to use AJAX to submit a form instead of the regular form submission.</li>
+<li>Preventing any unwanted default actions while still allowing the event to propagate through the DOM.</li>
+</ul>
+</li>
+</ul>
+<h3 id="in-summary">In summary:<a aria-hidden="true" class="anchor-heading icon-link" href="#in-summary"></a></h3>
+<ul>
+<li><code>stopPropagation</code> is about controlling the flow of the event through the DOM tree.</li>
+<li><code>preventDefault</code> is about controlling the browser's default behavior for the event.</li>
+</ul>
+<p>They can be used independently or together, depending on the situation. For example, in a form's submit event handler, you might want to validate the form data using JavaScript and, if validation fails, both prevent the form from submitting (<code>preventDefault()</code>) and also stop any other submit handlers from being notified (<code>stopPropagation()</code>).</p>

@@ -1,0 +1,33 @@
+<h1 id="falsy-value">falsy value<a aria-hidden="true" class="anchor-heading icon-link" href="#falsy-value"></a></h1>
+<h1 id="javascript-difference-between-null-undefined-or-undeclared">Javascript difference between null, undefined or undeclared<a aria-hidden="true" class="anchor-heading icon-link" href="#javascript-difference-between-null-undefined-or-undeclared"></a></h1>
+<p>undefined</p>
+<ul>
+<li>A variable that has been declared but not assigned a value is undefined.</li>
+<li>It's the default value of function parameters that are not provided when the function is called.</li>
+<li>If a function doesn't explicitly return a value, it will return undefined.</li>
+</ul>
+<p>undefined is a primitive type , and null is also a primitive type. .To check for it, compare using the strict equality (===) operator or typeof which will give the 'undefined' string. Note that you should not be using the abstract equality operator to check, as it will also return true if the value is null.</p>
+<p><code>null == undefined</code> true, <code>null === undefined</code> false</p>
+<p>A variable that is null will have been explicitly assigned to the null value. It represents no value and is different from undefined in the sense that it has been explicitly assigned</p>
+<p>null:</p>
+<ul>
+<li>null is an assignment value. It represents the intentional absence of any object value.</li>
+<li>It needs to be explicitly assigned to a variable.</li>
+</ul>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> foo<span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>foo<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>foo <span class="token operator">===</span> <span class="token keyword nil">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> foo <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>foo <span class="token operator">==</span> <span class="token keyword null nil">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true. Wrong, don't use this to check!</span>
+
+<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">var</span> baz <span class="token operator">=</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>baz<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined</span>
+</code></pre>
+<p>So, in summary:</p>
+<ul>
+<li>For <strong>primitives</strong>: Assignment is by value. Modifying one variable doesn't affect others with the original value.</li>
+<li>For <strong>non-primitives (objects)</strong>: Assignment is by reference. Modifying the object affects all variables pointing to that object, but reassigning one of those variables to a new object doesn't change the others.</li>
+</ul>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">#Frontend (Private)</a>   <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">#javascript (Private)</a></p>

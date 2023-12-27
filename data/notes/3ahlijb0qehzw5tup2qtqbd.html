@@ -1,0 +1,216 @@
+<h1 id="常見考題">常見考題<a aria-hidden="true" class="anchor-heading icon-link" href="#常見考題"></a></h1>
+<h2 id="2754bind-function-to-context"><a href="https://leetcode.com/problems/bind-function-to-context/">2754. Bind Function to Context</a><a aria-hidden="true" class="anchor-heading icon-link" href="#2754bind-function-to-context"></a></h2>
+<pre class="language-javascript"><code class="language-javascript"><span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>Object<span class="token punctuation">}</span></span> <span class="token parameter">obj</span>
+ * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>Function<span class="token punctuation">}</span></span>
+ */</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span><span class="token property-access">prototype</span><span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">bindPolyfill</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token spread operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">return</span> fn<span class="token punctuation">.</span><span class="token method function property-access">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token spread operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// OR return fn.apply(obj, args);</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>思路：
+在不能用 bind 的情況下，將 <code>obj</code> 帶入 thisArgs 為這 function 可以讀到的 this scope</p>
+<h2 id="2632curry"><a href="https://leetcode.com/problems/curry/">2632.Curry</a><a aria-hidden="true" class="anchor-heading icon-link" href="#2632curry"></a></h2>
+<p>原理：
+將函數的參數傳遞方式彈性運用，像是</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword control-flow">return</span> a <span class="token operator">+</span> b <span class="token operator">+</span> c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> curriedSum <span class="token operator">=</span> <span class="token function">curry</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span> <span class="token function">curriedSum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 6，仍然可以被正常调用</span>
+<span class="token function">alert</span><span class="token punctuation">(</span> <span class="token function">curriedSum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 6，对第一个参数的柯里化</span>
+<span class="token function">alert</span><span class="token punctuation">(</span> <span class="token function">curriedSum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 6，全柯里化</span>
+</code></pre>
+<p>思路：</p>
+<ol>
+<li>運用兩層 function</li>
+<li>確認原本 function 的參數長度，如果傳進來的參數長度大於原本的長度，將參數合併重新傳遞給上層 function</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> <span class="token function-variable function">curry</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> <span class="token keyword">function</span> <span class="token function">curried</span><span class="token punctuation">(</span><span class="token parameter"><span class="token spread operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">>=</span> fn<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow">return</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token spread operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token spread operator">...</span>args2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow">return</span> <span class="token function">curried</span><span class="token punctuation">(</span><span class="token spread operator">...</span>args<span class="token punctuation">,</span> <span class="token spread operator">...</span>args2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="2627-debounce"><a href="https://leetcode.com/problems/debounce/">2627. Debounce</a><a aria-hidden="true" class="anchor-heading icon-link" href="#2627-debounce"></a></h2>
+<p>Given a function fn and a time in milliseconds t, return a <strong>debounced</strong> version of that function.</p>
+<p><img src="/notes/assets/debounce.png"></p>
+<p>A <strong>debounced</strong> function is a function whose execution is delayed by t milliseconds and whose execution is cancelled if it is called again within that window of time. The debounced function should also receive the passed parameters.</p>
+<p>思路：
+在原本的 setTimeout 被設定後，新的 TimeoutId 會把原本的 TImeoutId 給清除，同樣會給定時間後執行</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>Function<span class="token punctuation">}</span></span> <span class="token parameter">fn</span>
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">}</span></span> <span class="token parameter">t</span> milliseconds
+ * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>Function<span class="token punctuation">}</span></span>
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">debounce</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> t</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timeoutId<span class="token punctuation">;</span>
+  <span class="token keyword control-flow">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token spread operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>timeoutId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ 	  <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeoutId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   
+   timeoutId <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=></span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token spread operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//notice: must execute fn()</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="2676-throttle"><a href="https://leetcode.com/problems/throttle/">2676. Throttle</a><a aria-hidden="true" class="anchor-heading icon-link" href="#2676-throttle"></a></h2>
+<p>Given a function fn and a time in milliseconds t, return a <strong>throttled</strong> version of that function.
+A <strong>throttled</strong> function is first called without delay and then, for a time interval of t milliseconds, can't be executed but should store the latest function arguments provided to call fn with them after the end of the delay.</p>
+<p><img src="/notes/assets/throttle.png"></p>
+<p>思路：</p>
+<ol>
+<li>利用 storedArg 確認 timeoutFunc 是否還需要做遞迴執行, waiting 確認 fn 執行後，再次被呼叫後，是否需要等待</li>
+<li>timeoutFunc 用來執行被延遲的 func，如果在 waiting，會等到 waiting 結束後從 storedArg 執行，但如果執行 waiting 後的 func ，又有新的不同 func 進來，確保有被執行到 </li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> t</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> storedArg <span class="token operator">=</span> <span class="token keyword null nil">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> waiting <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// step 2.</span>
+    <span class="token keyword">function</span> <span class="token function">timeoutFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>storedArg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            waiting <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">fn</span><span class="token punctuation">(</span><span class="token spread operator">...</span>storedArg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        storedArg <span class="token operator">=</span> <span class="token keyword null nil">null</span><span class="token punctuation">;</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span>timeoutFunc<span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">// step 1.</span>
+    <span class="token keyword control-flow">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token spread operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>waiting<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            storedArg <span class="token operator">=</span> args<span class="token punctuation">;</span>
+            <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">fn</span><span class="token punctuation">(</span><span class="token spread operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        waiting <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span>timeoutFunc<span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre>
+<h2 id="2628-json-deep-equal"><a href="https://leetcode.com/problems/json-deep-equal/description/">2628. JSON Deep Equal</a><a aria-hidden="true" class="anchor-heading icon-link" href="#2628-json-deep-equal"></a></h2>
+<p>思路：</p>
+<ol>
+<li>檢查是否相等</li>
+<li>如果是其中一個是 null，及早 return false</li>
+<li>利用 String() 判斷, 特例：
+<code>String({"0":1}) String([1]) => [object object] 1</code> </li>
+<li>判斷是否為 Array ，再來判斷長度，一樣用遞迴判斷內容是否相等</li>
+<li>判斷是否為 Object，再來判斷 property 長度，一樣用遞迴判斷內容是否相等</li>
+<li>最後 return true</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript"><span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>any<span class="token punctuation">}</span></span> <span class="token parameter">o1</span>
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>any<span class="token punctuation">}</span></span> <span class="token parameter">o2</span>
+ * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>boolean<span class="token punctuation">}</span></span>
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">areDeeplyEqual</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">o1<span class="token punctuation">,</span> o2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>o1 <span class="token operator">===</span> o2<span class="token punctuation">)</span> <span class="token keyword control-flow">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>o1 <span class="token operator">===</span> <span class="token keyword null nil">null</span> <span class="token operator">||</span> o2 <span class="token operator">===</span> <span class="token keyword null nil">null</span><span class="token punctuation">)</span> <span class="token keyword control-flow">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token known-class-name class-name">String</span><span class="token punctuation">(</span>o1<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token known-class-name class-name">String</span><span class="token punctuation">(</span>o2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword control-flow">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> o1 <span class="token operator">!==</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span> o1 <span class="token operator">!==</span> o2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token known-class-name class-name">Array</span><span class="token punctuation">.</span><span class="token method function property-access">isArray</span><span class="token punctuation">(</span>o1<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>o1<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">!==</span> o2<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> o1<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">areDeeplyEqual</span><span class="token punctuation">(</span>o1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> o2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> o1 <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&#x26;&#x26;</span> o1 <span class="token operator">!==</span> <span class="token keyword null nil">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> keys1 <span class="token operator">=</span> <span class="token known-class-name class-name">Object</span><span class="token punctuation">.</span><span class="token method function property-access">keys</span><span class="token punctuation">(</span>o1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> keys2 <span class="token operator">=</span> <span class="token known-class-name class-name">Object</span><span class="token punctuation">.</span><span class="token method function property-access">keys</span><span class="token punctuation">(</span>o2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Check if they have the same number of keys</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>keys1<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">!==</span> keys2<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> o1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">areDeeplyEqual</span><span class="token punctuation">(</span>o1<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> o2<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre>
+<h2 id="2636-promise-pool"><a href="https://leetcode.com/problems/promise-pool/description/">2636. Promise Pool</a><a aria-hidden="true" class="anchor-heading icon-link" href="#2636-promise-pool"></a></h2>
+<p>思路：
+因為 functions 不能用 iteration 的方式，所以用遞迴的方式，每次都把 functions 的第一個 function 執行，並且把剩下的 functions 傳遞給下一次的遞迴</p>
+<ol>
+<li>寫出 helper 目的讓 array 用 shift 出第一個 function，並且把剩下的 functions 傳遞給下一次的 helper 遞迴</li>
+<li>將 functions 轉成長度為 function 長度的 array 重複執行 helper</li>
+<li>return new Promise.all 結果</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript">type <span class="token function-variable function"><span class="token maybe-class-name">F</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=></span> <span class="token known-class-name class-name">Promise</span><span class="token operator">&#x3C;</span>any<span class="token operator">></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">promisePool</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">functions</span><span class="token operator">:</span> <span class="token constant">F</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">n</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token known-class-name class-name">Promise</span><span class="token operator">&#x3C;</span>any<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">evaluateFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token known-class-name class-name">Promise</span><span class="token operator">&#x3C;</span>any<span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>functions<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> f <span class="token operator">=</span> functions<span class="token punctuation">.</span><span class="token method function property-access">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>f<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow">await</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword control-flow">await</span> <span class="token function">evaluateFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">let</span> promises <span class="token operator">=</span> <span class="token known-class-name class-name">Array</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">fill</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=></span> <span class="token function">evaluateFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow">return</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span>promises<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="2625-flatten-deeply-nested-array"><a href="https://leetcode.com/problems/flatten-deeply-nested-array/description/">2625. Flatten Deeply Nested Array</a><a aria-hidden="true" class="anchor-heading icon-link" href="#2625-flatten-deeply-nested-array"></a></h2>
+<p>思路：</p>
+<ol>
+<li>輪詢 array</li>
+<li>利用遞迴，如果是 array 就繼續遞迴，如果不是就 push 到 result</li>
+<li>n 層解構，每呼叫一自己，n 就減一，直到 n 為 0，就不再遞迴</li>
+<li>如果不是 array 就 push 到 result</li>
+</ol>
+<pre class="language-javascript"><code class="language-javascript">type <span class="token maybe-class-name">MultiDimensionalArray</span> <span class="token operator">=</span> <span class="token punctuation">(</span>number <span class="token operator">|</span> <span class="token maybe-class-name">MultiDimensionalArray</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">flat</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">arr</span><span class="token operator">:</span> <span class="token maybe-class-name">MultiDimensionalArray</span><span class="token punctuation">,</span> <span class="token literal-property property">n</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token maybe-class-name">MultiDimensionalArray</span> <span class="token punctuation">{</span>
+	<span class="token keyword">let</span> <span class="token literal-property property">res</span><span class="token operator">:</span> <span class="token maybe-class-name">MultiDimensionalArray</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token keyword control-flow">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> arr<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token known-class-name class-name">Array</span><span class="token punctuation">.</span><span class="token method function property-access">isArray</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&#x26;&#x26;</span> n <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span><span class="token spread operator">...</span><span class="token method function property-access">flat</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword module">as</span> <span class="token maybe-class-name">MultiDimensionalArray</span><span class="token punctuation">,</span> n <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+    
+	<span class="token keyword control-flow">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">#leetcode (Private)</a> <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">#javascript (Private)</a></p>

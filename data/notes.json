@@ -1,0 +1,1605 @@
+{
+  "notes": {
+    "403": {
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "fname": "403",
+      "id": "403",
+      "title": "This page has not yet sprouted",
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718281321,
+      "created": 1703718281321,
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": null,
+      "data": {}
+    },
+    "0uuk3cixqkxat0xqh4cm542": {
+      "id": "0uuk3cixqkxat0xqh4cm542",
+      "title": "Welcome to Juian's Note",
+      "desc": "",
+      "updated": 1697115192196,
+      "created": 1697115085580,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "74034c389dde315161eef9d04fe474ed",
+      "links": [],
+      "anchors": {
+        "lookup": {
+          "type": "header",
+          "text": "Lookup",
+          "value": "lookup",
+          "line": 17,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [
+        "eaontip9ou4hzx32etylyya",
+        "f5344ht8bfoy774cvv27mgm",
+        "34fsdv2g735xufqoqfru1bq",
+        "aqjly8hefz09duquoig0ssv"
+      ],
+      "parent": null,
+      "data": {}
+    },
+    "aqjly8hefz09duquoig0ssv": {
+      "fname": "OpenBmc",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280941,
+      "created": 1703718280941,
+      "id": "aqjly8hefz09duquoig0ssv",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "dex7bvatjuswdmhe0i9o71c",
+        "q5avyefgum38wga8cyk9qn1"
+      ],
+      "parent": "0uuk3cixqkxat0xqh4cm542",
+      "data": {},
+      "title": "OpenBmc"
+    },
+    "q5avyefgum38wga8cyk9qn1": {
+      "fname": "OpenBmc.web-ui",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280941,
+      "created": 1703718280941,
+      "id": "q5avyefgum38wga8cyk9qn1",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "iwnmuojk2xdcfwu5rhxgcp6",
+        "3793y7n35v2sjshzrvje4ye",
+        "127pwxt4f37fnl23g4kvwfh"
+      ],
+      "parent": "aqjly8hefz09duquoig0ssv",
+      "data": {},
+      "title": "web-ui"
+    },
+    "127pwxt4f37fnl23g4kvwfh": {
+      "id": "127pwxt4f37fnl23g4kvwfh",
+      "title": "redfish spec validation",
+      "desc": "",
+      "updated": 1698797669324,
+      "created": 1698706963724,
+      "custom": {},
+      "fname": "OpenBmc.web-ui.redfish spec validation",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "d12c829e1d1e39201795329994e788f1",
+      "links": [],
+      "anchors": {
+        "redfish-spec-驗證參考": {
+          "type": "header",
+          "text": "Redfish spec 驗證參考",
+          "value": "redfish-spec-驗證參考",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "q5avyefgum38wga8cyk9qn1",
+      "data": {}
+    },
+    "3793y7n35v2sjshzrvje4ye": {
+      "id": "3793y7n35v2sjshzrvje4ye",
+      "title": "redfish intro",
+      "desc": "",
+      "updated": 1700642400473,
+      "created": 1700451111052,
+      "custom": {},
+      "fname": "OpenBmc.web-ui.redfish intro",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "3fd11929b089eddb69c25486cb8f4f4b",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "OpenBmc.web-ui.redfish intro",
+            "id": "3793y7n35v2sjshzrvje4ye",
+            "vaultName": "docs"
+          },
+          "value": "user.odata.id",
+          "alias": "@odata.id",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 4,
+              "offset": 302
+            },
+            "end": {
+              "line": 9,
+              "column": 13,
+              "offset": 311
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "user.odata.id"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "OpenBmc.web-ui.redfish intro",
+            "id": "3793y7n35v2sjshzrvje4ye",
+            "vaultName": "docs"
+          },
+          "value": "user.odata.type",
+          "alias": "@odata.type",
+          "position": {
+            "start": {
+              "line": 10,
+              "column": 4,
+              "offset": 315
+            },
+            "end": {
+              "line": 10,
+              "column": 15,
+              "offset": 326
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "user.odata.type"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "OpenBmc.web-ui.redfish intro",
+            "id": "3793y7n35v2sjshzrvje4ye",
+            "vaultName": "docs"
+          },
+          "value": "user.odata.context",
+          "alias": "@odata.context",
+          "position": {
+            "start": {
+              "line": 20,
+              "column": 4,
+              "offset": 630
+            },
+            "end": {
+              "line": 20,
+              "column": 18,
+              "offset": 644
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "user.odata.context"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "OpenBmc.web-ui.redfish intro",
+            "id": "3793y7n35v2sjshzrvje4ye",
+            "vaultName": "docs"
+          },
+          "value": "user.odata.etag",
+          "alias": "@odata.etag",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 4,
+              "offset": 648
+            },
+            "end": {
+              "line": 21,
+              "column": 15,
+              "offset": 659
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "user.odata.etag"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "OpenBmc.web-ui.redfish intro",
+            "id": "3793y7n35v2sjshzrvje4ye",
+            "vaultName": "docs"
+          },
+          "value": "user.odata.nextLink",
+          "alias": "@odata.nextLink",
+          "position": {
+            "start": {
+              "line": 24,
+              "column": 4,
+              "offset": 689
+            },
+            "end": {
+              "line": 24,
+              "column": 19,
+              "offset": 704
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "user.odata.nextLink"
+          }
+        }
+      ],
+      "anchors": {
+        "data-model": {
+          "type": "header",
+          "text": "Data Model",
+          "value": "data-model",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "resource": {
+          "type": "header",
+          "text": "Resource",
+          "value": "resource",
+          "line": 10,
+          "column": 0,
+          "depth": 3
+        },
+        "resource-collections": {
+          "type": "header",
+          "text": "Resource Collections",
+          "value": "resource-collections",
+          "line": 22,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "q5avyefgum38wga8cyk9qn1",
+      "data": {}
+    },
+    "iwnmuojk2xdcfwu5rhxgcp6": {
+      "id": "iwnmuojk2xdcfwu5rhxgcp6",
+      "title": "environment setup",
+      "desc": "",
+      "updated": 1697704761303,
+      "created": 1697697062214,
+      "custom": {},
+      "fname": "OpenBmc.web-ui.environment setup",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "fe8eb9a52ad974a9f93a1e366b674e99",
+      "links": [],
+      "anchors": {
+        "openbmc-webui-環境設置": {
+          "type": "header",
+          "text": "OpenBmc WebUI 環境設置",
+          "value": "openbmc-webui-環境設置",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "如何-build-openbmc-在-ubuntu-64-2004-上": {
+          "type": "header",
+          "text": "如何 build OpenBmc 在 ubuntu 64 20.04 上",
+          "value": "如何-build-openbmc-在-ubuntu-64-2004-上",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "如何在-ubuntu-進行-web-ui-開發": {
+          "type": "header",
+          "text": "如何在 ubuntu 進行 web-ui 開發",
+          "value": "如何在-ubuntu-進行-web-ui-開發",
+          "line": 49,
+          "column": 1,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "q5avyefgum38wga8cyk9qn1",
+      "data": {}
+    },
+    "dex7bvatjuswdmhe0i9o71c": {
+      "fname": "OpenBmc.embedded",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280941,
+      "created": 1703718280941,
+      "id": "dex7bvatjuswdmhe0i9o71c",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "i36c814gelbz60w7cvf3azw",
+        "vwhv555f54cvwxj7cpob0zj"
+      ],
+      "parent": "aqjly8hefz09duquoig0ssv",
+      "data": {},
+      "title": "embedded"
+    },
+    "vwhv555f54cvwxj7cpob0zj": {
+      "id": "vwhv555f54cvwxj7cpob0zj",
+      "title": "Yocto Receipe elements",
+      "desc": "",
+      "updated": 1700036094501,
+      "created": 1698887426299,
+      "custom": {},
+      "fname": "OpenBmc.embedded.yocto",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "ca50dbe005f35cbf15b9126fbd334914",
+      "links": [],
+      "anchors": {
+        "linux-embedded-necessaries": {
+          "type": "header",
+          "text": "Linux Embedded Necessaries",
+          "value": "linux-embedded-necessaries",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "toolchain": {
+          "type": "header",
+          "text": "Toolchain",
+          "value": "toolchain",
+          "line": 10,
+          "column": 0,
+          "depth": 3
+        },
+        "bootloader": {
+          "type": "header",
+          "text": "Bootloader",
+          "value": "bootloader",
+          "line": 13,
+          "column": 0,
+          "depth": 3
+        },
+        "kernel": {
+          "type": "header",
+          "text": "Kernel",
+          "value": "kernel",
+          "line": 16,
+          "column": 0,
+          "depth": 3
+        },
+        "root-filesystem": {
+          "type": "header",
+          "text": "Root filesystem",
+          "value": "root-filesystem",
+          "line": 19,
+          "column": 0,
+          "depth": 3
+        },
+        "yocto-project": {
+          "type": "header",
+          "text": "Yocto Project",
+          "value": "yocto-project",
+          "line": 24,
+          "column": 0,
+          "depth": 2
+        },
+        "advantages-of-yocto-project": {
+          "type": "header",
+          "text": "Advantages of Yocto Project",
+          "value": "advantages-of-yocto-project",
+          "line": 28,
+          "column": 0,
+          "depth": 2
+        },
+        "pocky": {
+          "type": "header",
+          "text": "Pocky",
+          "value": "pocky",
+          "line": 61,
+          "column": 0,
+          "depth": 2
+        },
+        "what-is-difference-between-poky-and-yocto": {
+          "type": "header",
+          "text": "What is difference between poky and Yocto",
+          "value": "what-is-difference-between-poky-and-yocto",
+          "line": 78,
+          "column": 0,
+          "depth": 3
+        },
+        "metadata": {
+          "type": "header",
+          "text": "Metadata",
+          "value": "metadata",
+          "line": 83,
+          "column": 0,
+          "depth": 2
+        },
+        "recipes": {
+          "type": "header",
+          "text": "Recipes",
+          "value": "recipes",
+          "line": 91,
+          "column": 0,
+          "depth": 2
+        },
+        "configuration-files": {
+          "type": "header",
+          "text": "Configuration Files",
+          "value": "configuration-files",
+          "line": 109,
+          "column": 0,
+          "depth": 2
+        },
+        "classes": {
+          "type": "header",
+          "text": "Classes",
+          "value": "classes",
+          "line": 122,
+          "column": 0,
+          "depth": 2
+        },
+        "layers": {
+          "type": "header",
+          "text": "Layers",
+          "value": "layers",
+          "line": 136,
+          "column": 0,
+          "depth": 2
+        },
+        "which-layers-are-used-by-pocky-build-system": {
+          "type": "header",
+          "text": "Which layers are used by Pocky build system?",
+          "value": "which-layers-are-used-by-pocky-build-system",
+          "line": 160,
+          "column": 0,
+          "depth": 2
+        },
+        "image": {
+          "type": "header",
+          "text": "Image",
+          "value": "image",
+          "line": 171,
+          "column": 0,
+          "depth": 2
+        },
+        "package": {
+          "type": "header",
+          "text": "Package",
+          "value": "package",
+          "line": 182,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "dex7bvatjuswdmhe0i9o71c",
+      "data": {}
+    },
+    "i36c814gelbz60w7cvf3azw": {
+      "id": "i36c814gelbz60w7cvf3azw",
+      "title": "poky",
+      "desc": "",
+      "updated": 1701547952674,
+      "created": 1701546787772,
+      "custom": {},
+      "fname": "OpenBmc.embedded.poky",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "40f0f1e893211aaac9242947f3d560fc",
+      "links": [],
+      "anchors": {
+        "poky-source-tree": {
+          "type": "header",
+          "text": "poky source tree",
+          "value": "poky-source-tree",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "dex7bvatjuswdmhe0i9o71c",
+      "data": {}
+    },
+    "34fsdv2g735xufqoqfru1bq": {
+      "fname": "Leetcode",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280940,
+      "created": 1703718280940,
+      "id": "34fsdv2g735xufqoqfru1bq",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "k0khbdpmmska41n99kokdbp",
+        "11os1axv4p1u2qagwg52tjn"
+      ],
+      "parent": "0uuk3cixqkxat0xqh4cm542",
+      "data": {},
+      "title": "Leetcode"
+    },
+    "11os1axv4p1u2qagwg52tjn": {
+      "fname": "Leetcode.javascript",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280941,
+      "created": 1703718280941,
+      "id": "11os1axv4p1u2qagwg52tjn",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "3ahlijb0qehzw5tup2qtqbd"
+      ],
+      "parent": "34fsdv2g735xufqoqfru1bq",
+      "data": {},
+      "title": "javascript"
+    },
+    "3ahlijb0qehzw5tup2qtqbd": {
+      "id": "3ahlijb0qehzw5tup2qtqbd",
+      "title": "常見考題",
+      "desc": "",
+      "updated": 1697533246095,
+      "created": 1697423855968,
+      "custom": {},
+      "fname": "Leetcode.javascript.常見考題",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "d8714f4b5e2d1ba0b81a6a7f812ffe63",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Leetcode.javascript.常見考題",
+            "id": "3ahlijb0qehzw5tup2qtqbd",
+            "vaultName": "docs"
+          },
+          "value": "tags.leetcode",
+          "alias": "#leetcode",
+          "position": {
+            "start": {
+              "line": 243,
+              "column": 1,
+              "offset": 5702
+            },
+            "end": {
+              "line": 243,
+              "column": 10,
+              "offset": 5711
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.leetcode"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Leetcode.javascript.常見考題",
+            "id": "3ahlijb0qehzw5tup2qtqbd",
+            "vaultName": "docs"
+          },
+          "value": "tags.javascript",
+          "alias": "#javascript",
+          "position": {
+            "start": {
+              "line": 243,
+              "column": 11,
+              "offset": 5712
+            },
+            "end": {
+              "line": 243,
+              "column": 22,
+              "offset": 5723
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.javascript"
+          }
+        }
+      ],
+      "anchors": {
+        "2754bind-function-to-context": {
+          "type": "header",
+          "text": "2754. Bind Function to Context",
+          "value": "2754bind-function-to-context",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "2632curry": {
+          "type": "header",
+          "text": "2632.Curry",
+          "value": "2632curry",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        },
+        "2627-debounce": {
+          "type": "header",
+          "text": "2627. Debounce",
+          "value": "2627-debounce",
+          "line": 60,
+          "column": 0,
+          "depth": 2
+        },
+        "2676-throttle": {
+          "type": "header",
+          "text": "2676. Throttle",
+          "value": "2676-throttle",
+          "line": 87,
+          "column": 0,
+          "depth": 2
+        },
+        "2628-json-deep-equal": {
+          "type": "header",
+          "text": "2628. JSON Deep Equal",
+          "value": "2628-json-deep-equal",
+          "line": 132,
+          "column": 0,
+          "depth": 2
+        },
+        "2636-promise-pool": {
+          "type": "header",
+          "text": "2636. Promise Pool",
+          "value": "2636-promise-pool",
+          "line": 192,
+          "column": 0,
+          "depth": 2
+        },
+        "2625-flatten-deeply-nested-array": {
+          "type": "header",
+          "text": "2625. Flatten Deeply Nested Array",
+          "value": "2625-flatten-deeply-nested-array",
+          "line": 223,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "11os1axv4p1u2qagwg52tjn",
+      "data": {}
+    },
+    "k0khbdpmmska41n99kokdbp": {
+      "fname": "Leetcode.algorithm",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280940,
+      "created": 1703718280940,
+      "id": "k0khbdpmmska41n99kokdbp",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "s9ka6qhiki5axyqny64oeu1"
+      ],
+      "parent": "34fsdv2g735xufqoqfru1bq",
+      "data": {},
+      "title": "algorithm"
+    },
+    "s9ka6qhiki5axyqny64oeu1": {
+      "id": "s9ka6qhiki5axyqny64oeu1",
+      "title": "tree pattern",
+      "desc": "",
+      "updated": 1697445043406,
+      "created": 1697444975208,
+      "custom": {},
+      "fname": "Leetcode.algorithm.tree pattern",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "d98dac71a0272fafa84d220d90146547",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Leetcode.algorithm.tree pattern",
+            "id": "s9ka6qhiki5axyqny64oeu1",
+            "vaultName": "docs"
+          },
+          "value": "tags.javascript",
+          "alias": "#javascript",
+          "position": {
+            "start": {
+              "line": 110,
+              "column": 1,
+              "offset": 2604
+            },
+            "end": {
+              "line": 110,
+              "column": 12,
+              "offset": 2615
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.javascript"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Leetcode.algorithm.tree pattern",
+            "id": "s9ka6qhiki5axyqny64oeu1",
+            "vaultName": "docs"
+          },
+          "value": "tags.leetcode",
+          "alias": "#leetcode",
+          "position": {
+            "start": {
+              "line": 110,
+              "column": 13,
+              "offset": 2616
+            },
+            "end": {
+              "line": 110,
+              "column": 22,
+              "offset": 2625
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.leetcode"
+          }
+        }
+      ],
+      "anchors": {
+        "sliding-window": {
+          "type": "header",
+          "text": "Sliding Window",
+          "value": "sliding-window",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "sliding-window-思路": {
+          "type": "header",
+          "text": "sliding window 思路",
+          "value": "sliding-window-思路",
+          "line": 45,
+          "column": 0,
+          "depth": 2
+        },
+        "題目": {
+          "type": "header",
+          "text": "題目",
+          "value": "題目",
+          "line": 50,
+          "column": 0,
+          "depth": 2
+        },
+        "bst": {
+          "type": "header",
+          "text": "BST",
+          "value": "bst",
+          "line": 58,
+          "column": 0,
+          "depth": 2
+        },
+        "binary-tree-基本題": {
+          "type": "header",
+          "text": "Binary Tree 基本題",
+          "value": "binary-tree-基本題",
+          "line": 81,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "k0khbdpmmska41n99kokdbp",
+      "data": {}
+    },
+    "f5344ht8bfoy774cvv27mgm": {
+      "fname": "Javascript",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280938,
+      "created": 1703718280938,
+      "id": "f5344ht8bfoy774cvv27mgm",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "e798jydlxjtxgev5gtdsdp7",
+        "6ex622vsm28garf6zzd3opn",
+        "4qy6bnrl5zfggy2bvjukgqu"
+      ],
+      "parent": "0uuk3cixqkxat0xqh4cm542",
+      "data": {},
+      "title": "Javascript"
+    },
+    "4qy6bnrl5zfggy2bvjukgqu": {
+      "fname": "Javascript.vanilla",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280939,
+      "created": 1703718280939,
+      "id": "4qy6bnrl5zfggy2bvjukgqu",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "675b8kkz5z5exjtsavxig5r",
+        "6jxbzesty79lf7e4n5tixm2",
+        "621af6is55kkbv39nbkyo8v",
+        "izbt415ae1injc41kihz3dz"
+      ],
+      "parent": "f5344ht8bfoy774cvv27mgm",
+      "data": {},
+      "title": "vanilla"
+    },
+    "izbt415ae1injc41kihz3dz": {
+      "id": "izbt415ae1injc41kihz3dz",
+      "title": "falsy value",
+      "desc": "",
+      "updated": 1697446496098,
+      "created": 1697446251960,
+      "custom": {},
+      "fname": "Javascript.vanilla.falsy value",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "fe1a2f6fba092049b573c6615cc61171",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Javascript.vanilla.falsy value",
+            "id": "izbt415ae1injc41kihz3dz",
+            "vaultName": "docs"
+          },
+          "value": "tags.Frontend",
+          "alias": "#Frontend",
+          "position": {
+            "start": {
+              "line": 38,
+              "column": 1,
+              "offset": 1656
+            },
+            "end": {
+              "line": 38,
+              "column": 10,
+              "offset": 1665
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.Frontend"
+          }
+        },
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Javascript.vanilla.falsy value",
+            "id": "izbt415ae1injc41kihz3dz",
+            "vaultName": "docs"
+          },
+          "value": "tags.javascript",
+          "alias": "#javascript",
+          "position": {
+            "start": {
+              "line": 38,
+              "column": 13,
+              "offset": 1668
+            },
+            "end": {
+              "line": 38,
+              "column": 24,
+              "offset": 1679
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.javascript"
+          }
+        }
+      ],
+      "anchors": {
+        "javascript-difference-between-null-undefined-or-undeclared": {
+          "type": "header",
+          "text": "Javascript difference between null, undefined or undeclared",
+          "value": "javascript-difference-between-null-undefined-or-undeclared",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "4qy6bnrl5zfggy2bvjukgqu",
+      "data": {}
+    },
+    "621af6is55kkbv39nbkyo8v": {
+      "id": "621af6is55kkbv39nbkyo8v",
+      "title": "eventPropogation",
+      "desc": "",
+      "updated": 1697444706495,
+      "created": 1697443956622,
+      "custom": {},
+      "fname": "Javascript.vanilla.eventPropogation",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "171c034304132b902ae0c0c3442243f9",
+      "links": [],
+      "anchors": {
+        "event-bubbleing-and-capturing-exection-order": {
+          "type": "header",
+          "text": "event bubbleing and capturing exection order",
+          "value": "event-bubbleing-and-capturing-exection-order",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "stoppropagation-and-preventdefault": {
+          "type": "header",
+          "text": "stopPropagation and preventDefault",
+          "value": "stoppropagation-and-preventdefault",
+          "line": 48,
+          "column": 0,
+          "depth": 2
+        },
+        "1-stoppropagation": {
+          "type": "header",
+          "text": "1. stopPropagation:",
+          "value": "1-stoppropagation",
+          "line": 53,
+          "column": 0,
+          "depth": 3
+        },
+        "2-preventdefault": {
+          "type": "header",
+          "text": "2. preventDefault:",
+          "value": "2-preventdefault",
+          "line": 65,
+          "column": 0,
+          "depth": 3
+        },
+        "in-summary": {
+          "type": "header",
+          "text": "In summary:",
+          "value": "in-summary",
+          "line": 77,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "4qy6bnrl5zfggy2bvjukgqu",
+      "data": {}
+    },
+    "6jxbzesty79lf7e4n5tixm2": {
+      "id": "6jxbzesty79lf7e4n5tixm2",
+      "title": "clousure exam",
+      "desc": "",
+      "updated": 1697637720794,
+      "created": 1697631263396,
+      "custom": {},
+      "fname": "Javascript.vanilla.clousure exam",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "cf2b3cf9f02c052b0ac9da9e82052cfb",
+      "links": [],
+      "anchors": {
+        "clousure-考題": {
+          "type": "header",
+          "text": "Clousure 考題",
+          "value": "clousure-考題",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "4qy6bnrl5zfggy2bvjukgqu",
+      "data": {}
+    },
+    "675b8kkz5z5exjtsavxig5r": {
+      "id": "675b8kkz5z5exjtsavxig5r",
+      "title": "classConstructor",
+      "desc": "",
+      "updated": 1697447867473,
+      "created": 1697447546622,
+      "custom": {},
+      "fname": "Javascript.vanilla.classConstructor",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "965fa4449f2eeb0915ecc80127943d74",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "Javascript.vanilla.classConstructor",
+            "id": "675b8kkz5z5exjtsavxig5r",
+            "vaultName": "docs"
+          },
+          "value": "tags.javascript",
+          "alias": "#javascript",
+          "position": {
+            "start": {
+              "line": 66,
+              "column": 1,
+              "offset": 1468
+            },
+            "end": {
+              "line": 66,
+              "column": 12,
+              "offset": 1479
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.javascript"
+          }
+        }
+      ],
+      "anchors": {
+        "javascript-class-do-what": {
+          "type": "header",
+          "text": "Javascript class do what",
+          "value": "javascript-class-do-what",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "4qy6bnrl5zfggy2bvjukgqu",
+      "data": {}
+    },
+    "6ex622vsm28garf6zzd3opn": {
+      "fname": "Javascript.library",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280939,
+      "created": 1703718280939,
+      "id": "6ex622vsm28garf6zzd3opn",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "9focmx7fjgd6sazrroqce2s"
+      ],
+      "parent": "f5344ht8bfoy774cvv27mgm",
+      "data": {},
+      "title": "library"
+    },
+    "9focmx7fjgd6sazrroqce2s": {
+      "id": "9focmx7fjgd6sazrroqce2s",
+      "title": "xterm",
+      "desc": "",
+      "updated": 1703715973892,
+      "created": 1703713914528,
+      "custom": {},
+      "fname": "Javascript.library.xterm",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "d6dd3cc201939587dc5de8a1ca745795",
+      "links": [],
+      "anchors": {
+        "xterm-踩雷經驗": {
+          "type": "header",
+          "text": "xterm 踩雷經驗",
+          "value": "xterm-踩雷經驗",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "在使用-xterm-的時候遇到一些問題這邊做一些紀錄": {
+          "type": "header",
+          "text": "在使用 xterm 的時候，遇到一些問題，這邊做一些紀錄",
+          "value": "在使用-xterm-的時候遇到一些問題這邊做一些紀錄",
+          "line": 9,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "6ex622vsm28garf6zzd3opn",
+      "data": {}
+    },
+    "e798jydlxjtxgev5gtdsdp7": {
+      "fname": "Javascript.Vue",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280938,
+      "created": 1703718280938,
+      "id": "e798jydlxjtxgev5gtdsdp7",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "yloqqaae81btzqdmio8fw00"
+      ],
+      "parent": "f5344ht8bfoy774cvv27mgm",
+      "data": {},
+      "title": "Vue"
+    },
+    "yloqqaae81btzqdmio8fw00": {
+      "id": "yloqqaae81btzqdmio8fw00",
+      "title": "Reactivity API",
+      "desc": "",
+      "updated": 1698656893357,
+      "created": 1698650716284,
+      "custom": {},
+      "fname": "Javascript.Vue.Reactivity API",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "204e862eab16408d9b25a780693a2535",
+      "links": [],
+      "anchors": {
+        "vue---reactivity-api": {
+          "type": "header",
+          "text": "Vue - Reactivity API",
+          "value": "vue---reactivity-api",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "ref": {
+          "type": "header",
+          "text": "Ref",
+          "value": "ref",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "watch": {
+          "type": "header",
+          "text": "watch",
+          "value": "watch",
+          "line": 27,
+          "column": 0,
+          "depth": 3
+        },
+        "reactive": {
+          "type": "header",
+          "text": "Reactive",
+          "value": "reactive",
+          "line": 30,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "e798jydlxjtxgev5gtdsdp7",
+      "data": {}
+    },
+    "eaontip9ou4hzx32etylyya": {
+      "fname": "原則",
+      "stub": true,
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1703718280936,
+      "created": 1703718280936,
+      "id": "eaontip9ou4hzx32etylyya",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "ck00lij8gct4uhxjc3jqgri"
+      ],
+      "parent": "0uuk3cixqkxat0xqh4cm542",
+      "data": {},
+      "title": "原則"
+    },
+    "ck00lij8gct4uhxjc3jqgri": {
+      "id": "ck00lij8gct4uhxjc3jqgri",
+      "title": "工作與生活",
+      "desc": "",
+      "updated": 1697108977790,
+      "created": 1697108812896,
+      "custom": {},
+      "fname": "原則.工作與生活",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "fa5642cc76d5f6b70fa8f66a8a101624",
+      "links": [],
+      "anchors": {
+        "介紹-原則---工作與生活-讀書心得": {
+          "type": "header",
+          "text": "介紹 原則 - 工作與生活 讀書心得",
+          "value": "介紹-原則---工作與生活-讀書心得",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [
+        "bf4q1xbskt60or4oq7idsda"
+      ],
+      "parent": "eaontip9ou4hzx32etylyya",
+      "data": {}
+    },
+    "bf4q1xbskt60or4oq7idsda": {
+      "id": "bf4q1xbskt60or4oq7idsda",
+      "title": "第一章",
+      "desc": "",
+      "updated": 1697109059136,
+      "created": 1697108872498,
+      "custom": {},
+      "fname": "原則.工作與生活.第一章",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "1bfb00a0ebef8be189f37550e53f1e90",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "原則.工作與生活.第一章",
+            "id": "bf4q1xbskt60or4oq7idsda",
+            "vaultName": "docs"
+          },
+          "value": "tags.book/讀書心得/原則-生活和工作",
+          "alias": "#book/讀書心得/原則-生活和工作",
+          "position": {
+            "start": {
+              "line": 140,
+              "column": 1,
+              "offset": 2738
+            },
+            "end": {
+              "line": 140,
+              "column": 20,
+              "offset": 2757
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "tags.book/讀書心得/原則-生活和工作"
+          }
+        }
+      ],
+      "anchors": {
+        "第一章-擁抱現實沈著應對": {
+          "type": "header",
+          "text": "第一章. 擁抱現實，沈著應對",
+          "value": "第一章-擁抱現實沈著應對",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "11-當個超現實主義者": {
+          "type": "header",
+          "text": "1.1 當個超現實主義者",
+          "value": "11-當個超現實主義者",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        },
+        "12-事實--或者更確切的說就是對現實有精準了解--是任何良好結果不可或缺的基礎": {
+          "type": "header",
+          "text": "1.2 事實 ——— 或者更確切的說，就是對現實有精準了解 ——— 是任何良好結果不可或缺的基礎",
+          "value": "12-事實--或者更確切的說就是對現實有精準了解--是任何良好結果不可或缺的基礎",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "13-態度要極度開放極度透明": {
+          "type": "header",
+          "text": "1.3 態度要極度開放，極度透明",
+          "value": "13-態度要極度開放極度透明",
+          "line": 15,
+          "column": 0,
+          "depth": 2
+        },
+        "14-向大自然學習現實如何運作": {
+          "type": "header",
+          "text": "1.4 向大自然學習現實如何運作",
+          "value": "14-向大自然學習現實如何運作",
+          "line": 29,
+          "column": 0,
+          "depth": 2
+        },
+        "15-進化是人生最大的成就和最大的回報": {
+          "type": "header",
+          "text": "1.5 進化是人生最大的成就和最大的回報",
+          "value": "15-進化是人生最大的成就和最大的回報",
+          "line": 48,
+          "column": 0,
+          "depth": 2
+        },
+        "16-了解大自然給我們的現實教訓": {
+          "type": "header",
+          "text": "1.6 了解大自然給我們的現實教訓",
+          "value": "16-了解大自然給我們的現實教訓",
+          "line": 66,
+          "column": 0,
+          "depth": 1
+        },
+        "17-痛苦--反省--進步": {
+          "type": "header",
+          "text": "1.7 痛苦 + 反省 = 進步",
+          "value": "17-痛苦--反省--進步",
+          "line": 80,
+          "column": 0,
+          "depth": 1
+        },
+        "18-權衡後續和更後續的結果": {
+          "type": "header",
+          "text": "1.8 權衡後續和更後續的結果",
+          "value": "18-權衡後續和更後續的結果",
+          "line": 98,
+          "column": 0,
+          "depth": 2
+        },
+        "19-為結果負責": {
+          "type": "header",
+          "text": "1.9 為結果負責",
+          "value": "19-為結果負責",
+          "line": 100,
+          "column": 0,
+          "depth": 2
+        },
+        "110-從更高層次看這部機器": {
+          "type": "header",
+          "text": "1.10 從更高層次看這部機器",
+          "value": "110-從更高層次看這部機器",
+          "line": 105,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "ck00lij8gct4uhxjc3jqgri",
+      "data": {}
+    }
+  },
+  "domains": [
+    {
+      "id": "0uuk3cixqkxat0xqh4cm542",
+      "title": "Welcome to Juian's Note",
+      "desc": "",
+      "updated": 1697115192196,
+      "created": 1697115085580,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": ".",
+        "selfContained": true,
+        "name": "docs"
+      },
+      "contentHash": "74034c389dde315161eef9d04fe474ed",
+      "links": [],
+      "anchors": {
+        "lookup": {
+          "type": "header",
+          "text": "Lookup",
+          "value": "lookup",
+          "line": 17,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [
+        "eaontip9ou4hzx32etylyya",
+        "f5344ht8bfoy774cvv27mgm",
+        "34fsdv2g735xufqoqfru1bq",
+        "aqjly8hefz09duquoig0ssv"
+      ],
+      "parent": null,
+      "data": {},
+      "body": "\nThis is my personal knowledge base. It is built using [Dendron](https://wiki.dendron.so/).\n\n這會是中英文夾雜的知識庫\n\n包含\n - 一些讀書心得\n - 一些個人筆記\n - 一些 leetcode 的解題心得\n\n## Lookup\n\nThis section contains useful links to related resources.\n\n- [Getting Started Guide](https://link.dendron.so/6b25)\n- [Discord](https://link.dendron.so/6b23)\n- [Home Page](https://wiki.dendron.so/)\n- [Github](https://link.dendron.so/6b24)\n- [Developer Docs](https://docs.dendron.so/)"
+    }
+  ],
+  "noteIndex": {
+    "id": "0uuk3cixqkxat0xqh4cm542",
+    "title": "Welcome to Juian's Note",
+    "desc": "",
+    "updated": 1697115192196,
+    "created": 1697115085580,
+    "custom": {
+      "nav_order": 0,
+      "permalink": "/"
+    },
+    "fname": "root",
+    "type": "note",
+    "vault": {
+      "fsPath": ".",
+      "selfContained": true,
+      "name": "docs"
+    },
+    "contentHash": "74034c389dde315161eef9d04fe474ed",
+    "links": [],
+    "anchors": {
+      "lookup": {
+        "type": "header",
+        "text": "Lookup",
+        "value": "lookup",
+        "line": 17,
+        "column": 0,
+        "depth": 2
+      }
+    },
+    "children": [
+      "eaontip9ou4hzx32etylyya",
+      "f5344ht8bfoy774cvv27mgm",
+      "34fsdv2g735xufqoqfru1bq",
+      "aqjly8hefz09duquoig0ssv"
+    ],
+    "parent": null,
+    "data": {},
+    "body": "\nThis is my personal knowledge base. It is built using [Dendron](https://wiki.dendron.so/).\n\n這會是中英文夾雜的知識庫\n\n包含\n - 一些讀書心得\n - 一些個人筆記\n - 一些 leetcode 的解題心得\n\n## Lookup\n\nThis section contains useful links to related resources.\n\n- [Getting Started Guide](https://link.dendron.so/6b25)\n- [Discord](https://link.dendron.so/6b23)\n- [Home Page](https://wiki.dendron.so/)\n- [Github](https://link.dendron.so/6b24)\n- [Developer Docs](https://docs.dendron.so/)"
+  },
+  "vaults": [
+    {
+      "fsPath": ".",
+      "selfContained": true,
+      "name": "docs"
+    }
+  ]
+}

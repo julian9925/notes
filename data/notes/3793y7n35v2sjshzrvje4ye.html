@@ -1,0 +1,31 @@
+<h1 id="redfish-intro">redfish intro<a aria-hidden="true" class="anchor-heading icon-link" href="#redfish-intro"></a></h1>
+<h2 id="data-model">Data Model<a aria-hidden="true" class="anchor-heading icon-link" href="#data-model"></a></h2>
+<h3 id="resource">Resource<a aria-hidden="true" class="anchor-heading icon-link" href="#resource"></a></h3>
+<p>  A Resource is defined as a single entity. Each resource is strongly typed and defined in a Redfish schema document, identifiable in the response payload by a unique type identifier property.</p>
+<p>  The response for a single resource typically contains properties like:</p>
+<ul>
+<li>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">@odata.id (Private)</a></p>
+</li>
+<li>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">@odata.type (Private)</a></p>
+</li>
+<li>
+<p>Id</p>
+</li>
+<li>
+<p>Name</p>
+<p>Responses may also contain other properties defined within the schema for that resource type.</p>
+</li>
+</ul>
+<h3 id="resource-collections">Resource Collections<a aria-hidden="true" class="anchor-heading icon-link" href="#resource-collections"></a></h3>
+<p>  A Resource Collection is a collection of resources share the same schema definition.</p>
+<p>  Responses for Resource Collections may contain the following properties:</p>
+<ul>
+<li><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">@odata.context (Private)</a></li>
+<li><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">@odata.etag (Private)</a></li>
+<li>Description</li>
+<li>Members</li>
+<li><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">@odata.nextLink (Private)</a></li>
+<li>Oem</li>
+</ul>

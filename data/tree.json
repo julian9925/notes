@@ -1,0 +1,280 @@
+{
+  "roots": [
+    {
+      "key": "f5344ht8bfoy774cvv27mgm",
+      "title": "Javascript",
+      "icon": "plusOutlined",
+      "hasTitleNumberOutlined": false,
+      "vaultName": "docs",
+      "children": [
+        {
+          "key": "e798jydlxjtxgev5gtdsdp7",
+          "title": "Vue",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "yloqqaae81btzqdmio8fw00",
+              "title": "Reactivity API",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "6ex622vsm28garf6zzd3opn",
+          "title": "library",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "9focmx7fjgd6sazrroqce2s",
+              "title": "xterm",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "4qy6bnrl5zfggy2bvjukgqu",
+          "title": "vanilla",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "675b8kkz5z5exjtsavxig5r",
+              "title": "classConstructor",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            },
+            {
+              "key": "6jxbzesty79lf7e4n5tixm2",
+              "title": "clousure exam",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            },
+            {
+              "key": "621af6is55kkbv39nbkyo8v",
+              "title": "eventPropogation",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            },
+            {
+              "key": "izbt415ae1injc41kihz3dz",
+              "title": "falsy value",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "34fsdv2g735xufqoqfru1bq",
+      "title": "Leetcode",
+      "icon": "plusOutlined",
+      "hasTitleNumberOutlined": false,
+      "vaultName": "docs",
+      "children": [
+        {
+          "key": "k0khbdpmmska41n99kokdbp",
+          "title": "algorithm",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "s9ka6qhiki5axyqny64oeu1",
+              "title": "tree pattern",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "11os1axv4p1u2qagwg52tjn",
+          "title": "javascript",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "3ahlijb0qehzw5tup2qtqbd",
+              "title": "常見考題",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "aqjly8hefz09duquoig0ssv",
+      "title": "OpenBmc",
+      "icon": "plusOutlined",
+      "hasTitleNumberOutlined": false,
+      "vaultName": "docs",
+      "children": [
+        {
+          "key": "dex7bvatjuswdmhe0i9o71c",
+          "title": "embedded",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "i36c814gelbz60w7cvf3azw",
+              "title": "poky",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            },
+            {
+              "key": "vwhv555f54cvwxj7cpob0zj",
+              "title": "Yocto Receipe elements",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "q5avyefgum38wga8cyk9qn1",
+          "title": "web-ui",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "iwnmuojk2xdcfwu5rhxgcp6",
+              "title": "environment setup",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            },
+            {
+              "key": "3793y7n35v2sjshzrvje4ye",
+              "title": "redfish intro",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            },
+            {
+              "key": "127pwxt4f37fnl23g4kvwfh",
+              "title": "redfish spec validation",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "eaontip9ou4hzx32etylyya",
+      "title": "原則",
+      "icon": "plusOutlined",
+      "hasTitleNumberOutlined": false,
+      "vaultName": "docs",
+      "children": [
+        {
+          "key": "ck00lij8gct4uhxjc3jqgri",
+          "title": "工作與生活",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "docs",
+          "children": [
+            {
+              "key": "bf4q1xbskt60or4oq7idsda",
+              "title": "第一章",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "docs",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "f5344ht8bfoy774cvv27mgm": null,
+    "e798jydlxjtxgev5gtdsdp7": "f5344ht8bfoy774cvv27mgm",
+    "yloqqaae81btzqdmio8fw00": "e798jydlxjtxgev5gtdsdp7",
+    "6ex622vsm28garf6zzd3opn": "f5344ht8bfoy774cvv27mgm",
+    "9focmx7fjgd6sazrroqce2s": "6ex622vsm28garf6zzd3opn",
+    "4qy6bnrl5zfggy2bvjukgqu": "f5344ht8bfoy774cvv27mgm",
+    "675b8kkz5z5exjtsavxig5r": "4qy6bnrl5zfggy2bvjukgqu",
+    "6jxbzesty79lf7e4n5tixm2": "4qy6bnrl5zfggy2bvjukgqu",
+    "621af6is55kkbv39nbkyo8v": "4qy6bnrl5zfggy2bvjukgqu",
+    "izbt415ae1injc41kihz3dz": "4qy6bnrl5zfggy2bvjukgqu",
+    "34fsdv2g735xufqoqfru1bq": null,
+    "k0khbdpmmska41n99kokdbp": "34fsdv2g735xufqoqfru1bq",
+    "s9ka6qhiki5axyqny64oeu1": "k0khbdpmmska41n99kokdbp",
+    "11os1axv4p1u2qagwg52tjn": "34fsdv2g735xufqoqfru1bq",
+    "3ahlijb0qehzw5tup2qtqbd": "11os1axv4p1u2qagwg52tjn",
+    "aqjly8hefz09duquoig0ssv": null,
+    "dex7bvatjuswdmhe0i9o71c": "aqjly8hefz09duquoig0ssv",
+    "i36c814gelbz60w7cvf3azw": "dex7bvatjuswdmhe0i9o71c",
+    "vwhv555f54cvwxj7cpob0zj": "dex7bvatjuswdmhe0i9o71c",
+    "q5avyefgum38wga8cyk9qn1": "aqjly8hefz09duquoig0ssv",
+    "iwnmuojk2xdcfwu5rhxgcp6": "q5avyefgum38wga8cyk9qn1",
+    "3793y7n35v2sjshzrvje4ye": "q5avyefgum38wga8cyk9qn1",
+    "127pwxt4f37fnl23g4kvwfh": "q5avyefgum38wga8cyk9qn1",
+    "eaontip9ou4hzx32etylyya": null,
+    "ck00lij8gct4uhxjc3jqgri": "eaontip9ou4hzx32etylyya",
+    "bf4q1xbskt60or4oq7idsda": "ck00lij8gct4uhxjc3jqgri"
+  },
+  "notesLabelById": {
+    "f5344ht8bfoy774cvv27mgm": "Javascript",
+    "e798jydlxjtxgev5gtdsdp7": "Vue",
+    "yloqqaae81btzqdmio8fw00": "Reactivity API",
+    "6ex622vsm28garf6zzd3opn": "library",
+    "9focmx7fjgd6sazrroqce2s": "xterm",
+    "4qy6bnrl5zfggy2bvjukgqu": "vanilla",
+    "675b8kkz5z5exjtsavxig5r": "classConstructor",
+    "6jxbzesty79lf7e4n5tixm2": "clousure exam",
+    "621af6is55kkbv39nbkyo8v": "eventPropogation",
+    "izbt415ae1injc41kihz3dz": "falsy value",
+    "34fsdv2g735xufqoqfru1bq": "Leetcode",
+    "k0khbdpmmska41n99kokdbp": "algorithm",
+    "s9ka6qhiki5axyqny64oeu1": "tree pattern",
+    "11os1axv4p1u2qagwg52tjn": "javascript",
+    "3ahlijb0qehzw5tup2qtqbd": "常見考題",
+    "aqjly8hefz09duquoig0ssv": "OpenBmc",
+    "dex7bvatjuswdmhe0i9o71c": "embedded",
+    "i36c814gelbz60w7cvf3azw": "poky",
+    "vwhv555f54cvwxj7cpob0zj": "Yocto Receipe elements",
+    "q5avyefgum38wga8cyk9qn1": "web-ui",
+    "iwnmuojk2xdcfwu5rhxgcp6": "environment setup",
+    "3793y7n35v2sjshzrvje4ye": "redfish intro",
+    "127pwxt4f37fnl23g4kvwfh": "redfish spec validation",
+    "eaontip9ou4hzx32etylyya": "原則",
+    "ck00lij8gct4uhxjc3jqgri": "工作與生活",
+    "bf4q1xbskt60or4oq7idsda": "第一章"
+  }
+}

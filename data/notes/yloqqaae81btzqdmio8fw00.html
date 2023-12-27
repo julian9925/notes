@@ -1,0 +1,19 @@
+<h1 id="reactivity-api">Reactivity API<a aria-hidden="true" class="anchor-heading icon-link" href="#reactivity-api"></a></h1>
+<h1 id="vue---reactivity-api">Vue - Reactivity API<a aria-hidden="true" class="anchor-heading icon-link" href="#vue---reactivity-api"></a></h1>
+<h2 id="ref">Ref<a aria-hidden="true" class="anchor-heading icon-link" href="#ref"></a></h2>
+<ul>
+<li>ref can use both primitive value and objects</li>
+</ul>
+<pre class="language-javascript"><code class="language-javascript"><span class="token operator">&#x3C;</span>script setup<span class="token operator">></span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> ref <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">const</span> numberRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// OK</span>
+<span class="token keyword">const</span> objectRef <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// OK</span>
+<span class="token operator">&#x3C;</span><span class="token operator">/</span>script<span class="token operator">></span>
+
+<span class="token operator">&#x3C;</span>template<span class="token operator">></span>
+	<span class="token punctuation">{</span><span class="token punctuation">{</span> numberRef<span class="token punctuation">.</span><span class="token property-access">value</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&#x3C;</span><span class="token operator">/</span>template<span class="token operator">></span>
+</code></pre>
+<h3 id="watch">watch<a aria-hidden="true" class="anchor-heading icon-link" href="#watch"></a></h3>
+<h2 id="reactive">Reactive<a aria-hidden="true" class="anchor-heading icon-link" href="#reactive"></a></h2>

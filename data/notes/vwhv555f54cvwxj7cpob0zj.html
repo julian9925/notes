@@ -1,0 +1,269 @@
+<h1 id="yocto-receipe-elements">Yocto Receipe elements<a aria-hidden="true" class="anchor-heading icon-link" href="#yocto-receipe-elements"></a></h1>
+<h2 id="linux-embedded-necessaries">Linux Embedded Necessaries<a aria-hidden="true" class="anchor-heading icon-link" href="#linux-embedded-necessaries"></a></h2>
+<h3 id="toolchain">Toolchain<a aria-hidden="true" class="anchor-heading icon-link" href="#toolchain"></a></h3>
+<ul>
+<li>Compiler and otehr tools needed to create code for your target devices.</li>
+</ul>
+<h3 id="bootloader">Bootloader<a aria-hidden="true" class="anchor-heading icon-link" href="#bootloader"></a></h3>
+<ul>
+<li>The program that initializes the board and loads Linux Kernel.</li>
+</ul>
+<h3 id="kernel">Kernel<a aria-hidden="true" class="anchor-heading icon-link" href="#kernel"></a></h3>
+<ul>
+<li>This is the heart of system, managing system resources and interfacing eith hardware.</li>
+</ul>
+<h3 id="root-filesystem">Root filesystem<a aria-hidden="true" class="anchor-heading icon-link" href="#root-filesystem"></a></h3>
+<ul>
+<li>Contains the libraries and program that run once the kernel has completed its initialization.</li>
+</ul>
+<hr>
+<h2 id="yocto-project">Yocto Project<a aria-hidden="true" class="anchor-heading icon-link" href="#yocto-project"></a></h2>
+<ul>
+<li>Ycoto provides open source, high quality infrastructure and tools to help developers create their own custom Linux distributions for any hardware architecture.</li>
+</ul>
+<h2 id="advantages-of-yocto-project">Advantages of Yocto Project<a aria-hidden="true" class="anchor-heading icon-link" href="#advantages-of-yocto-project"></a></h2>
+<ul>
+<li>Widely Adopted Across the Industry
+<ul>
+<li>Semiconductor, operating system, software, and service vendors exist whose products and services adopt and support the Yocto Project.
+Eg. Intel, Facebook, arm, Juniper Networks, LG, AMD, NXP, DELL</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Architecture Agnostic
+<ul>
+<li>supports Intel, ARM, MIPS, AMD, PPC and other architectures
+chip vendors create and supply BSPs that support their hardware
+if you have custom silicon, you can create a BSP that supports that architecture
+the Yocto Project fully supports a wide range of device emulation through the Quick EMUlator (QEMU)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Images and Code Transfer Easily
+<ul>
+<li>Yocto Project output can easily move between architectures without moving to new development environments.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Flexibility
+<ul>
+<li>Through customization and layering, a project group can leverage the base Linux distribution to create a distribution that works for their product needs.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Ideal for Constrained Embedded and IoT devices
+<ul>
+<li>Unlike a full Linux distribution, you can use the Yocto Project to create exactly what you need for embedded devices
+You only add the feature support or packages that you absolutely need for the device</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Uses a Layer Model
+<ul>
+<li>The Yocto Project layer infrastructure groups related functionality into separate bundles.
+You can incrementally add these grouped functionalities to your project as needed
+Allows you to easily extend the system, make customizations, and keep functionality organized.</li>
+</ul>
+</li>
+</ul>
+<h2 id="pocky">Pocky<a aria-hidden="true" class="anchor-heading icon-link" href="#pocky"></a></h2>
+<ul>
+<li>
+<p>Pocky is a reference distribution of Yocto Project. The word "reference" is used to mean "example" in this context.</p>
+</li>
+<li>
+<p>Yocto project use Poky to build image (Kernel, system, and application software) for targeted hardware.</p>
+</li>
+<li>
+<p>At the technical level it is combined repository of its component</p>
+<ul>
+<li>Bitlake</li>
+<li>OpenEmbedded Core</li>
+<li>meta-yocto-bsp</li>
+<li>Documentation</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Note: Poky = Bitbake + Metadata</p>
+</blockquote>
+<blockquote>
+<p>Note: Poky does not contain binary files,it is a working example of how to build your own custom Linux distribution from source.</p>
+</blockquote>
+<h3 id="what-is-difference-between-poky-and-yocto">What is difference between poky and Yocto<a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-difference-between-poky-and-yocto"></a></h3>
+<ul>
+<li>The exact difference between Yocto and Poky is Yocto refers to the organization ( like one would refer to 'canonical', the company behind Ubuntu ), and Poky refers to the actual bits downloaded ( analogous to 'Ubuntu' )</li>
+</ul>
+<h2 id="metadata">Metadata<a aria-hidden="true" class="anchor-heading icon-link" href="#metadata"></a></h2>
+<ul>
+<li>Metadata is collection of
+<ul>
+<li>Configuration files (.conf)</li>
+<li>Recipes (.bb and .bbappend)</li>
+<li>Classes (.bbclass)</li>
+<li>Include files (.inc)</li>
+</ul>
+</li>
+</ul>
+<h2 id="recipes">Recipes<a aria-hidden="true" class="anchor-heading icon-link" href="#recipes"></a></h2>
+<ul>
+<li>
+<p>Non-Yocto: A receipe is a set of instructions that describe how to prepare or make something, especially a culinary dish.</p>
+</li>
+<li>
+<p>Yocto: A recipe is a set of instructions that is read and processed by the bitbake.</p>
+</li>
+<li>
+<p>Extension od receipe: .bb</p>
+</li>
+<li>
+<p>A Receipe describes:</p>
+<ul>
+<li>Where to find the source code</li>
+<li>Which patches to apply</li>
+<li>Configuration options (Library dependencies, compiler flags, etc)</li>
+<li>Install</li>
+<li>License</li>
+</ul>
+</li>
+<li>
+<p>Example of a recipe:</p>
+<ul>
+<li><code>dhcp_4.4.1.bb</code></li>
+<li><code>gstreamer1.0_1.16.1.bb</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="configuration-files">Configuration Files<a aria-hidden="true" class="anchor-heading icon-link" href="#configuration-files"></a></h2>
+<ul>
+<li>
+<p>Files which hold global definitions of varaiables and hardware configuration information.</p>
+</li>
+<li>
+<p>They tell bitbake how to build the software and put into the image to support a specific hardware platform.</p>
+</li>
+<li>
+<p>Extension of configuration files: .conf</p>
+</li>
+<li>
+<p>Types:</p>
+<ul>
+<li>Machine configuration files</li>
+<li>Distribution configuration options</li>
+<li>Compiler tuning options</li>
+<li>General Common Configuration Options</li>
+<li>USer Configuration Optiopns (local.conf)</li>
+</ul>
+</li>
+</ul>
+<h2 id="classes">Classes<a aria-hidden="true" class="anchor-heading icon-link" href="#classes"></a></h2>
+<ul>
+<li>
+<p>Class files are used to abstract common functionality and share it among multiple recipes (.bb) files</p>
+</li>
+<li>
+<p>To use a class, you simply make sure the receipe inherits the class.</p>
+</li>
+<li>
+<p>Extension of class files: .bbclass</p>
+</li>
+<li>
+<p>They are usually placed in classes directory inside the meta* directory.</p>
+</li>
+<li>
+<p>Example of a classes:</p>
+<ul>
+<li><code>cmake.bbclass</code> - Handles cmake in receipes</li>
+<li><code>kernel.bbclass</code> - Handles buliding kernel. Contains code to build all kernel tree.</li>
+<li><code>module.bbclass</code> - Provide support for building out-of-tree Linux Kernel Modules.</li>
+</ul>
+</li>
+</ul>
+<h2 id="layers">Layers<a aria-hidden="true" class="anchor-heading icon-link" href="#layers"></a></h2>
+<ul>
+<li>
+<p>A layer is a collection of recipes.</p>
+</li>
+<li>
+<p>A layer is a directory containing recipes, configuration files, classes, etc. (receipe containers)</p>
+</li>
+<li>
+<p>Typical naming convention for layers: meta-&#x3C;layer_name></p>
+</li>
+<li>
+<p>Poky has the following layers: </p>
+<ul>
+<li>meta, meta-poky, meta-yocto-bsp, meta-selftest, meta-skeleton</li>
+</ul>
+</li>
+<li>
+<p>Why Layers:</p>
+<ul>
+<li>
+<p>Layers provide a mechanism to isolate meta data according to functionality, for instance BSPs, distribution configuration, etc.</p>
+</li>
+<li>
+<p>For instance, you should have a BSP layer, a GUI layer, a distro configuration layer, middleware layer, or an application layer.</p>
+</li>
+<li>
+<p>Putting you entire build into one layer limits and complicates fureture customization and maintenance.</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li>meta-yocto-bsp   -- BSP metadata</li>
+<li>meta-pocky			 -- Distro metadata</li>
+</ul>
+</li>
+<li>
+<p>Layers allow you to easily add entire set of meta data and/or replace sets with other sets.</p>
+</li>
+<li>
+<p>meta-pocky, is itself a layer applied on top of the QE-Core metadata layer.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="which-layers-are-used-by-pocky-build-system">Which layers are used by Pocky build system?<a aria-hidden="true" class="anchor-heading icon-link" href="#which-layers-are-used-by-pocky-build-system"></a></h2>
+<p>  BBLAYERS varaible in <code>build/conf/bblayers.conf</code> file lists the layers Bitbake tries to find.</p>
+<p>  If bblayers.conf file is not present when you start the build, the OpenEmbedded build system will create a default bblayers.conf.sample when you source the oe-init-build-env script.</p>
+<ul>
+<li>command to find out whick layers are present in the build system:
+<ul>
+<li>go to pocky directory</li>
+<li><code>source ./oe-init-build-env</code></li>
+<li><code>bitbake-layers show-layers</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="image">Image<a aria-hidden="true" class="anchor-heading icon-link" href="#image"></a></h2>
+<p>An image is the top level receipe, it has a description, a license and inherits from the core-image class.</p>
+<p>It is used alongside the machine definition, machine describes the hardware used and its capabilities</p>
+<p>Image is archecture agnostic and defines how the root filesystem is built, with the packages to include and the configuration to apply.</p>
+<ul>
+<li>Command to check the list of available images:
+<ul>
+<li><code>ls meta*/recipes*/images/*.bb</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="package">Package<a aria-hidden="true" class="anchor-heading icon-link" href="#package"></a></h2>
+<ul>
+<li>
+<p>A package is a software component that can be installed on a system. Such as file with name <code>*.rpm</code> ,<code>*.ipk</code> or <code>*.deb</code></p>
+</li>
+<li>
+<p>A single recipe can produce multiple packages. All pacakges that a receipe generated are listed in the receipe varaiable.</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li><code>dhcp_4.4.1.bb</code> - dhcp, dhcp-client, dhcp-dev, dhcp-doc, dhcp-server</li>
+</ul>
+</li>
+</ul>

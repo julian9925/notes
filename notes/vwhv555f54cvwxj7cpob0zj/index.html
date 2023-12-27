@@ -1,0 +1,269 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="icon" href="/notes/favicon.ico"/><title>Yocto Receipe elements</title><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="description" content="Personal Knowledge Space"/><meta property="og:title" content="Yocto Receipe elements"/><meta property="og:description" content="Personal Knowledge Space"/><meta property="og:url" content="https://julian9925.github.io/notes/notes/vwhv555f54cvwxj7cpob0zj/"/><meta property="og:type" content="article"/><meta property="article:published_time" content="11/2/2023"/><meta property="article:modified_time" content="11/15/2023"/><link rel="canonical" href="https://julian9925.github.io/notes/notes/vwhv555f54cvwxj7cpob0zj/"/><meta name="next-head-count" content="14"/><link rel="preload" href="/notes/_next/static/css/43ff47b87e0ea661.css" as="style"/><link rel="stylesheet" href="/notes/_next/static/css/43ff47b87e0ea661.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/notes/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/notes/_next/static/chunks/webpack-3c3caf24173c5c0a.js" defer=""></script><script src="/notes/_next/static/chunks/framework-28c999baf2863c3d.js" defer=""></script><script src="/notes/_next/static/chunks/main-5bb057769933cd70.js" defer=""></script><script src="/notes/_next/static/chunks/pages/_app-bc43cc4f0bf62fc2.js" defer=""></script><script src="/notes/_next/static/chunks/935-4dee79e80b8641c6.js" defer=""></script><script src="/notes/_next/static/chunks/6-50972def09142ee2.js" defer=""></script><script src="/notes/_next/static/chunks/pages/notes/%5Bid%5D-78d472fa3b924116.js" defer=""></script><script src="/notes/_next/static/HQStjr3JeRiFw6c07KJ2P/_buildManifest.js" defer=""></script><script src="/notes/_next/static/HQStjr3JeRiFw6c07KJ2P/_ssgManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><section class="ant-layout" style="width:100%;min-height:100%"><header class="ant-layout-header" style="position:fixed;isolation:isolate;z-index:1;width:100%;border-bottom:1px solid #d4dadf;height:64px;padding:0 24px 0 2px"><div class="ant-row ant-row-center" style="max-width:992px;justify-content:space-between;margin:0 auto"><div style="display:flex" class="ant-col ant-col-xs-20 ant-col-sm-4"></div><div class="ant-col gutter-row ant-col-xs-0 ant-col-sm-20 ant-col-md-20 ant-col-lg-19"><div class="ant-select ant-select-lg ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-show-search" style="width:100%"><div class="ant-select-selector"><span class="ant-select-selection-search"><input type="search" autoComplete="off" class="ant-select-selection-search-input" role="combobox" aria-haspopup="listbox" aria-owns="undefined_list" aria-autocomplete="list" aria-controls="undefined_list" aria-activedescendant="undefined_list_0" value=""/></span><span class="ant-select-selection-placeholder">For full text search please use the &#x27;?&#x27; prefix. e.g. ? Onboarding</span></div></div></div><div style="display:none;align-items:center;justify-content:center" class="ant-col ant-col-xs-4 ant-col-sm-4 ant-col-md-0 ant-col-lg-0"><span role="img" aria-label="menu" style="font-size:24px" tabindex="-1" class="anticon anticon-menu"><svg viewBox="64 64 896 896" focusable="false" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></span></div></div></header><section class="ant-layout" style="margin-top:64px;display:flex;flex-direction:row"><div class="site-layout-sidebar" style="flex:0 0 auto;width:calc(max((100% - 992px) / 2, 0px) + 200px);min-width:200px;padding-left:calc((100% - 992px) / 2)"><aside class="ant-layout-sider ant-layout-sider-dark" style="position:fixed;overflow:auto;height:calc(100vh - 64px);background-color:transparent;flex:0 0 200px;max-width:200px;min-width:200px;width:200px"><div class="ant-layout-sider-children"></div></aside></div><main class="ant-layout-content side-layout-main" style="max-width:1200px;min-width:0;display:block"><div style="padding:0 24px"><div class="main-content" role="main"><div class="ant-row"><div class="ant-col ant-col-24"><div class="ant-row" style="margin-left:-10px;margin-right:-10px"><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-24 ant-col-md-18"><div><h1 id="yocto-receipe-elements">Yocto Receipe elements<a aria-hidden="true" class="anchor-heading icon-link" href="#yocto-receipe-elements"></a></h1>
+<h2 id="linux-embedded-necessaries">Linux Embedded Necessaries<a aria-hidden="true" class="anchor-heading icon-link" href="#linux-embedded-necessaries"></a></h2>
+<h3 id="toolchain">Toolchain<a aria-hidden="true" class="anchor-heading icon-link" href="#toolchain"></a></h3>
+<ul>
+<li>Compiler and otehr tools needed to create code for your target devices.</li>
+</ul>
+<h3 id="bootloader">Bootloader<a aria-hidden="true" class="anchor-heading icon-link" href="#bootloader"></a></h3>
+<ul>
+<li>The program that initializes the board and loads Linux Kernel.</li>
+</ul>
+<h3 id="kernel">Kernel<a aria-hidden="true" class="anchor-heading icon-link" href="#kernel"></a></h3>
+<ul>
+<li>This is the heart of system, managing system resources and interfacing eith hardware.</li>
+</ul>
+<h3 id="root-filesystem">Root filesystem<a aria-hidden="true" class="anchor-heading icon-link" href="#root-filesystem"></a></h3>
+<ul>
+<li>Contains the libraries and program that run once the kernel has completed its initialization.</li>
+</ul>
+<hr>
+<h2 id="yocto-project">Yocto Project<a aria-hidden="true" class="anchor-heading icon-link" href="#yocto-project"></a></h2>
+<ul>
+<li>Ycoto provides open source, high quality infrastructure and tools to help developers create their own custom Linux distributions for any hardware architecture.</li>
+</ul>
+<h2 id="advantages-of-yocto-project">Advantages of Yocto Project<a aria-hidden="true" class="anchor-heading icon-link" href="#advantages-of-yocto-project"></a></h2>
+<ul>
+<li>Widely Adopted Across the Industry
+<ul>
+<li>Semiconductor, operating system, software, and service vendors exist whose products and services adopt and support the Yocto Project.
+Eg. Intel, Facebook, arm, Juniper Networks, LG, AMD, NXP, DELL</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Architecture Agnostic
+<ul>
+<li>supports Intel, ARM, MIPS, AMD, PPC and other architectures
+chip vendors create and supply BSPs that support their hardware
+if you have custom silicon, you can create a BSP that supports that architecture
+the Yocto Project fully supports a wide range of device emulation through the Quick EMUlator (QEMU)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Images and Code Transfer Easily
+<ul>
+<li>Yocto Project output can easily move between architectures without moving to new development environments.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Flexibility
+<ul>
+<li>Through customization and layering, a project group can leverage the base Linux distribution to create a distribution that works for their product needs.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Ideal for Constrained Embedded and IoT devices
+<ul>
+<li>Unlike a full Linux distribution, you can use the Yocto Project to create exactly what you need for embedded devices
+You only add the feature support or packages that you absolutely need for the device</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Uses a Layer Model
+<ul>
+<li>The Yocto Project layer infrastructure groups related functionality into separate bundles.
+You can incrementally add these grouped functionalities to your project as needed
+Allows you to easily extend the system, make customizations, and keep functionality organized.</li>
+</ul>
+</li>
+</ul>
+<h2 id="pocky">Pocky<a aria-hidden="true" class="anchor-heading icon-link" href="#pocky"></a></h2>
+<ul>
+<li>
+<p>Pocky is a reference distribution of Yocto Project. The word "reference" is used to mean "example" in this context.</p>
+</li>
+<li>
+<p>Yocto project use Poky to build image (Kernel, system, and application software) for targeted hardware.</p>
+</li>
+<li>
+<p>At the technical level it is combined repository of its component</p>
+<ul>
+<li>Bitlake</li>
+<li>OpenEmbedded Core</li>
+<li>meta-yocto-bsp</li>
+<li>Documentation</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Note: Poky = Bitbake + Metadata</p>
+</blockquote>
+<blockquote>
+<p>Note: Poky does not contain binary files,it is a working example of how to build your own custom Linux distribution from source.</p>
+</blockquote>
+<h3 id="what-is-difference-between-poky-and-yocto">What is difference between poky and Yocto<a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-difference-between-poky-and-yocto"></a></h3>
+<ul>
+<li>The exact difference between Yocto and Poky is Yocto refers to the organization ( like one would refer to 'canonical', the company behind Ubuntu ), and Poky refers to the actual bits downloaded ( analogous to 'Ubuntu' )</li>
+</ul>
+<h2 id="metadata">Metadata<a aria-hidden="true" class="anchor-heading icon-link" href="#metadata"></a></h2>
+<ul>
+<li>Metadata is collection of
+<ul>
+<li>Configuration files (.conf)</li>
+<li>Recipes (.bb and .bbappend)</li>
+<li>Classes (.bbclass)</li>
+<li>Include files (.inc)</li>
+</ul>
+</li>
+</ul>
+<h2 id="recipes">Recipes<a aria-hidden="true" class="anchor-heading icon-link" href="#recipes"></a></h2>
+<ul>
+<li>
+<p>Non-Yocto: A receipe is a set of instructions that describe how to prepare or make something, especially a culinary dish.</p>
+</li>
+<li>
+<p>Yocto: A recipe is a set of instructions that is read and processed by the bitbake.</p>
+</li>
+<li>
+<p>Extension od receipe: .bb</p>
+</li>
+<li>
+<p>A Receipe describes:</p>
+<ul>
+<li>Where to find the source code</li>
+<li>Which patches to apply</li>
+<li>Configuration options (Library dependencies, compiler flags, etc)</li>
+<li>Install</li>
+<li>License</li>
+</ul>
+</li>
+<li>
+<p>Example of a recipe:</p>
+<ul>
+<li><code>dhcp_4.4.1.bb</code></li>
+<li><code>gstreamer1.0_1.16.1.bb</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="configuration-files">Configuration Files<a aria-hidden="true" class="anchor-heading icon-link" href="#configuration-files"></a></h2>
+<ul>
+<li>
+<p>Files which hold global definitions of varaiables and hardware configuration information.</p>
+</li>
+<li>
+<p>They tell bitbake how to build the software and put into the image to support a specific hardware platform.</p>
+</li>
+<li>
+<p>Extension of configuration files: .conf</p>
+</li>
+<li>
+<p>Types:</p>
+<ul>
+<li>Machine configuration files</li>
+<li>Distribution configuration options</li>
+<li>Compiler tuning options</li>
+<li>General Common Configuration Options</li>
+<li>USer Configuration Optiopns (local.conf)</li>
+</ul>
+</li>
+</ul>
+<h2 id="classes">Classes<a aria-hidden="true" class="anchor-heading icon-link" href="#classes"></a></h2>
+<ul>
+<li>
+<p>Class files are used to abstract common functionality and share it among multiple recipes (.bb) files</p>
+</li>
+<li>
+<p>To use a class, you simply make sure the receipe inherits the class.</p>
+</li>
+<li>
+<p>Extension of class files: .bbclass</p>
+</li>
+<li>
+<p>They are usually placed in classes directory inside the meta* directory.</p>
+</li>
+<li>
+<p>Example of a classes:</p>
+<ul>
+<li><code>cmake.bbclass</code> - Handles cmake in receipes</li>
+<li><code>kernel.bbclass</code> - Handles buliding kernel. Contains code to build all kernel tree.</li>
+<li><code>module.bbclass</code> - Provide support for building out-of-tree Linux Kernel Modules.</li>
+</ul>
+</li>
+</ul>
+<h2 id="layers">Layers<a aria-hidden="true" class="anchor-heading icon-link" href="#layers"></a></h2>
+<ul>
+<li>
+<p>A layer is a collection of recipes.</p>
+</li>
+<li>
+<p>A layer is a directory containing recipes, configuration files, classes, etc. (receipe containers)</p>
+</li>
+<li>
+<p>Typical naming convention for layers: meta-&#x3C;layer_name></p>
+</li>
+<li>
+<p>Poky has the following layers: </p>
+<ul>
+<li>meta, meta-poky, meta-yocto-bsp, meta-selftest, meta-skeleton</li>
+</ul>
+</li>
+<li>
+<p>Why Layers:</p>
+<ul>
+<li>
+<p>Layers provide a mechanism to isolate meta data according to functionality, for instance BSPs, distribution configuration, etc.</p>
+</li>
+<li>
+<p>For instance, you should have a BSP layer, a GUI layer, a distro configuration layer, middleware layer, or an application layer.</p>
+</li>
+<li>
+<p>Putting you entire build into one layer limits and complicates fureture customization and maintenance.</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li>meta-yocto-bsp   -- BSP metadata</li>
+<li>meta-pocky			 -- Distro metadata</li>
+</ul>
+</li>
+<li>
+<p>Layers allow you to easily add entire set of meta data and/or replace sets with other sets.</p>
+</li>
+<li>
+<p>meta-pocky, is itself a layer applied on top of the QE-Core metadata layer.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="which-layers-are-used-by-pocky-build-system">Which layers are used by Pocky build system?<a aria-hidden="true" class="anchor-heading icon-link" href="#which-layers-are-used-by-pocky-build-system"></a></h2>
+<p>  BBLAYERS varaible in <code>build/conf/bblayers.conf</code> file lists the layers Bitbake tries to find.</p>
+<p>  If bblayers.conf file is not present when you start the build, the OpenEmbedded build system will create a default bblayers.conf.sample when you source the oe-init-build-env script.</p>
+<ul>
+<li>command to find out whick layers are present in the build system:
+<ul>
+<li>go to pocky directory</li>
+<li><code>source ./oe-init-build-env</code></li>
+<li><code>bitbake-layers show-layers</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="image">Image<a aria-hidden="true" class="anchor-heading icon-link" href="#image"></a></h2>
+<p>An image is the top level receipe, it has a description, a license and inherits from the core-image class.</p>
+<p>It is used alongside the machine definition, machine describes the hardware used and its capabilities</p>
+<p>Image is archecture agnostic and defines how the root filesystem is built, with the packages to include and the configuration to apply.</p>
+<ul>
+<li>Command to check the list of available images:
+<ul>
+<li><code>ls meta*/recipes*/images/*.bb</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="package">Package<a aria-hidden="true" class="anchor-heading icon-link" href="#package"></a></h2>
+<ul>
+<li>
+<p>A package is a software component that can be installed on a system. Such as file with name <code>*.rpm</code> ,<code>*.ipk</code> or <code>*.deb</code></p>
+</li>
+<li>
+<p>A single recipe can produce multiple packages. All pacakges that a receipe generated are listed in the receipe varaiable.</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li><code>dhcp_4.4.1.bb</code> - dhcp, dhcp-client, dhcp-dev, dhcp-doc, dhcp-server</li>
+</ul>
+</li>
+</ul></div></div><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-0 ant-col-md-6"><div><div class=""><div class="ant-anchor-wrapper dendron-toc" style="max-height:calc(100vh - 64px);z-index:1"><div class="ant-anchor"><div class="ant-anchor-ink"><span class="ant-anchor-ink-ball"></span></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#linux-embedded-necessaries" title="Linux Embedded Necessaries">Linux Embedded Necessaries</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#toolchain" title="Toolchain">Toolchain</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#bootloader" title="Bootloader">Bootloader</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#kernel" title="Kernel">Kernel</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#root-filesystem" title="Root filesystem">Root filesystem</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#yocto-project" title="Yocto Project">Yocto Project</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#advantages-of-yocto-project" title="Advantages of Yocto Project">Advantages of Yocto Project</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#pocky" title="Pocky">Pocky</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#what-is-difference-between-poky-and-yocto" title="What is difference between poky and Yocto">What is difference between poky and Yocto</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#metadata" title="Metadata">Metadata</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#recipes" title="Recipes">Recipes</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#configuration-files" title="Configuration Files">Configuration Files</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#classes" title="Classes">Classes</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#layers" title="Layers">Layers</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#which-layers-are-used-by-pocky-build-system" title="Which layers are used by Pocky build system?">Which layers are used by Pocky build system?</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#image" title="Image">Image</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#package" title="Package">Package</a></div></div></div></div></div></div></div></div></div></div></div><div class="ant-divider ant-divider-horizontal" role="separator"></div><footer class="ant-layout-footer" style="padding:0 24px 24px"></footer></main></section></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"note":{"id":"vwhv555f54cvwxj7cpob0zj","title":"Yocto Receipe elements","desc":"","updated":1700036094501,"created":1698887426299,"custom":{},"fname":"OpenBmc.embedded.yocto","type":"note","vault":{"fsPath":".","selfContained":true,"name":"docs"},"contentHash":"ca50dbe005f35cbf15b9126fbd334914","links":[],"anchors":{"linux-embedded-necessaries":{"type":"header","text":"Linux Embedded Necessaries","value":"linux-embedded-necessaries","line":8,"column":0,"depth":2},"toolchain":{"type":"header","text":"Toolchain","value":"toolchain","line":10,"column":0,"depth":3},"bootloader":{"type":"header","text":"Bootloader","value":"bootloader","line":13,"column":0,"depth":3},"kernel":{"type":"header","text":"Kernel","value":"kernel","line":16,"column":0,"depth":3},"root-filesystem":{"type":"header","text":"Root filesystem","value":"root-filesystem","line":19,"column":0,"depth":3},"yocto-project":{"type":"header","text":"Yocto Project","value":"yocto-project","line":24,"column":0,"depth":2},"advantages-of-yocto-project":{"type":"header","text":"Advantages of Yocto Project","value":"advantages-of-yocto-project","line":28,"column":0,"depth":2},"pocky":{"type":"header","text":"Pocky","value":"pocky","line":61,"column":0,"depth":2},"what-is-difference-between-poky-and-yocto":{"type":"header","text":"What is difference between poky and Yocto","value":"what-is-difference-between-poky-and-yocto","line":78,"column":0,"depth":3},"metadata":{"type":"header","text":"Metadata","value":"metadata","line":83,"column":0,"depth":2},"recipes":{"type":"header","text":"Recipes","value":"recipes","line":91,"column":0,"depth":2},"configuration-files":{"type":"header","text":"Configuration Files","value":"configuration-files","line":109,"column":0,"depth":2},"classes":{"type":"header","text":"Classes","value":"classes","line":122,"column":0,"depth":2},"layers":{"type":"header","text":"Layers","value":"layers","line":136,"column":0,"depth":2},"which-layers-are-used-by-pocky-build-system":{"type":"header","text":"Which layers are used by Pocky build system?","value":"which-layers-are-used-by-pocky-build-system","line":160,"column":0,"depth":2},"image":{"type":"header","text":"Image","value":"image","line":171,"column":0,"depth":2},"package":{"type":"header","text":"Package","value":"package","line":182,"column":0,"depth":2}},"children":[],"parent":"dex7bvatjuswdmhe0i9o71c","data":{}},"body":"\u003ch1 id=\"yocto-receipe-elements\"\u003eYocto Receipe elements\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#yocto-receipe-elements\"\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003ch2 id=\"linux-embedded-necessaries\"\u003eLinux Embedded Necessaries\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#linux-embedded-necessaries\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003ch3 id=\"toolchain\"\u003eToolchain\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#toolchain\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eCompiler and otehr tools needed to create code for your target devices.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"bootloader\"\u003eBootloader\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#bootloader\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eThe program that initializes the board and loads Linux Kernel.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"kernel\"\u003eKernel\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#kernel\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eThis is the heart of system, managing system resources and interfacing eith hardware.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"root-filesystem\"\u003eRoot filesystem\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#root-filesystem\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eContains the libraries and program that run once the kernel has completed its initialization.\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr\u003e\n\u003ch2 id=\"yocto-project\"\u003eYocto Project\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#yocto-project\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eYcoto provides open source, high quality infrastructure and tools to help developers create their own custom Linux distributions for any hardware architecture.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"advantages-of-yocto-project\"\u003eAdvantages of Yocto Project\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#advantages-of-yocto-project\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eWidely Adopted Across the Industry\n\u003cul\u003e\n\u003cli\u003eSemiconductor, operating system, software, and service vendors exist whose products and services adopt and support the Yocto Project.\nEg. Intel, Facebook, arm, Juniper Networks, LG, AMD, NXP, DELL\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cul\u003e\n\u003cli\u003eArchitecture Agnostic\n\u003cul\u003e\n\u003cli\u003esupports Intel, ARM, MIPS, AMD, PPC and other architectures\nchip vendors create and supply BSPs that support their hardware\nif you have custom silicon, you can create a BSP that supports that architecture\nthe Yocto Project fully supports a wide range of device emulation through the Quick EMUlator (QEMU)\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cul\u003e\n\u003cli\u003eImages and Code Transfer Easily\n\u003cul\u003e\n\u003cli\u003eYocto Project output can easily move between architectures without moving to new development environments.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cul\u003e\n\u003cli\u003eFlexibility\n\u003cul\u003e\n\u003cli\u003eThrough customization and layering, a project group can leverage the base Linux distribution to create a distribution that works for their product needs.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cul\u003e\n\u003cli\u003eIdeal for Constrained Embedded and IoT devices\n\u003cul\u003e\n\u003cli\u003eUnlike a full Linux distribution, you can use the Yocto Project to create exactly what you need for embedded devices\nYou only add the feature support or packages that you absolutely need for the device\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cul\u003e\n\u003cli\u003eUses a Layer Model\n\u003cul\u003e\n\u003cli\u003eThe Yocto Project layer infrastructure groups related functionality into separate bundles.\nYou can incrementally add these grouped functionalities to your project as needed\nAllows you to easily extend the system, make customizations, and keep functionality organized.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"pocky\"\u003ePocky\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#pocky\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003ePocky is a reference distribution of Yocto Project. The word \"reference\" is used to mean \"example\" in this context.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYocto project use Poky to build image (Kernel, system, and application software) for targeted hardware.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAt the technical level it is combined repository of its component\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eBitlake\u003c/li\u003e\n\u003cli\u003eOpenEmbedded Core\u003c/li\u003e\n\u003cli\u003emeta-yocto-bsp\u003c/li\u003e\n\u003cli\u003eDocumentation\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cblockquote\u003e\n\u003cp\u003eNote: Poky = Bitbake + Metadata\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cblockquote\u003e\n\u003cp\u003eNote: Poky does not contain binary files,it is a working example of how to build your own custom Linux distribution from source.\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003ch3 id=\"what-is-difference-between-poky-and-yocto\"\u003eWhat is difference between poky and Yocto\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#what-is-difference-between-poky-and-yocto\"\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eThe exact difference between Yocto and Poky is Yocto refers to the organization ( like one would refer to 'canonical', the company behind Ubuntu ), and Poky refers to the actual bits downloaded ( analogous to 'Ubuntu' )\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"metadata\"\u003eMetadata\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#metadata\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eMetadata is collection of\n\u003cul\u003e\n\u003cli\u003eConfiguration files (.conf)\u003c/li\u003e\n\u003cli\u003eRecipes (.bb and .bbappend)\u003c/li\u003e\n\u003cli\u003eClasses (.bbclass)\u003c/li\u003e\n\u003cli\u003eInclude files (.inc)\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"recipes\"\u003eRecipes\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#recipes\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eNon-Yocto: A receipe is a set of instructions that describe how to prepare or make something, especially a culinary dish.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYocto: A recipe is a set of instructions that is read and processed by the bitbake.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eExtension od receipe: .bb\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eA Receipe describes:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eWhere to find the source code\u003c/li\u003e\n\u003cli\u003eWhich patches to apply\u003c/li\u003e\n\u003cli\u003eConfiguration options (Library dependencies, compiler flags, etc)\u003c/li\u003e\n\u003cli\u003eInstall\u003c/li\u003e\n\u003cli\u003eLicense\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eExample of a recipe:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003edhcp_4.4.1.bb\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003egstreamer1.0_1.16.1.bb\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"configuration-files\"\u003eConfiguration Files\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#configuration-files\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eFiles which hold global definitions of varaiables and hardware configuration information.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThey tell bitbake how to build the software and put into the image to support a specific hardware platform.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eExtension of configuration files: .conf\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTypes:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eMachine configuration files\u003c/li\u003e\n\u003cli\u003eDistribution configuration options\u003c/li\u003e\n\u003cli\u003eCompiler tuning options\u003c/li\u003e\n\u003cli\u003eGeneral Common Configuration Options\u003c/li\u003e\n\u003cli\u003eUSer Configuration Optiopns (local.conf)\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"classes\"\u003eClasses\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#classes\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eClass files are used to abstract common functionality and share it among multiple recipes (.bb) files\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTo use a class, you simply make sure the receipe inherits the class.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eExtension of class files: .bbclass\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThey are usually placed in classes directory inside the meta* directory.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eExample of a classes:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003ecmake.bbclass\u003c/code\u003e - Handles cmake in receipes\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003ekernel.bbclass\u003c/code\u003e - Handles buliding kernel. Contains code to build all kernel tree.\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003emodule.bbclass\u003c/code\u003e - Provide support for building out-of-tree Linux Kernel Modules.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"layers\"\u003eLayers\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#layers\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eA layer is a collection of recipes.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eA layer is a directory containing recipes, configuration files, classes, etc. (receipe containers)\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTypical naming convention for layers: meta-\u0026#x3C;layer_name\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ePoky has the following layers: \u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003emeta, meta-poky, meta-yocto-bsp, meta-selftest, meta-skeleton\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eWhy Layers:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eLayers provide a mechanism to isolate meta data according to functionality, for instance BSPs, distribution configuration, etc.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eFor instance, you should have a BSP layer, a GUI layer, a distro configuration layer, middleware layer, or an application layer.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ePutting you entire build into one layer limits and complicates fureture customization and maintenance.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eExample:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003emeta-yocto-bsp   -- BSP metadata\u003c/li\u003e\n\u003cli\u003emeta-pocky\t\t\t -- Distro metadata\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eLayers allow you to easily add entire set of meta data and/or replace sets with other sets.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003emeta-pocky, is itself a layer applied on top of the QE-Core metadata layer.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"which-layers-are-used-by-pocky-build-system\"\u003eWhich layers are used by Pocky build system?\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#which-layers-are-used-by-pocky-build-system\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e  BBLAYERS varaible in \u003ccode\u003ebuild/conf/bblayers.conf\u003c/code\u003e file lists the layers Bitbake tries to find.\u003c/p\u003e\n\u003cp\u003e  If bblayers.conf file is not present when you start the build, the OpenEmbedded build system will create a default bblayers.conf.sample when you source the oe-init-build-env script.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003ecommand to find out whick layers are present in the build system:\n\u003cul\u003e\n\u003cli\u003ego to pocky directory\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003esource ./oe-init-build-env\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003ebitbake-layers show-layers\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"image\"\u003eImage\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#image\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eAn image is the top level receipe, it has a description, a license and inherits from the core-image class.\u003c/p\u003e\n\u003cp\u003eIt is used alongside the machine definition, machine describes the hardware used and its capabilities\u003c/p\u003e\n\u003cp\u003eImage is archecture agnostic and defines how the root filesystem is built, with the packages to include and the configuration to apply.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eCommand to check the list of available images:\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003els meta*/recipes*/images/*.bb\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"package\"\u003ePackage\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#package\"\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eA package is a software component that can be installed on a system. Such as file with name \u003ccode\u003e*.rpm\u003c/code\u003e ,\u003ccode\u003e*.ipk\u003c/code\u003e or \u003ccode\u003e*.deb\u003c/code\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eA single recipe can produce multiple packages. All pacakges that a receipe generated are listed in the receipe varaiable.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eExample:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003edhcp_4.4.1.bb\u003c/code\u003e - dhcp, dhcp-client, dhcp-dev, dhcp-doc, dhcp-server\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e","noteIndex":{"id":"0uuk3cixqkxat0xqh4cm542","title":"Welcome to Juian's Note","desc":"","updated":1697115192196,"created":1697115085580,"custom":{"nav_order":0,"permalink":"/"},"fname":"root","type":"note","vault":{"fsPath":".","selfContained":true,"name":"docs"},"contentHash":"74034c389dde315161eef9d04fe474ed","links":[],"anchors":{"lookup":{"type":"header","text":"Lookup","value":"lookup","line":17,"column":0,"depth":2}},"children":["eaontip9ou4hzx32etylyya","f5344ht8bfoy774cvv27mgm","34fsdv2g735xufqoqfru1bq","aqjly8hefz09duquoig0ssv"],"parent":null,"data":{},"body":"\nThis is my personal knowledge base. It is built using [Dendron](https://wiki.dendron.so/).\n\n這會是中英文夾雜的知識庫\n\n包含\n - 一些讀書心得\n - 一些個人筆記\n - 一些 leetcode 的解題心得\n\n## Lookup\n\nThis section contains useful links to related resources.\n\n- [Getting Started Guide](https://link.dendron.so/6b25)\n- [Discord](https://link.dendron.so/6b23)\n- [Home Page](https://wiki.dendron.so/)\n- [Github](https://link.dendron.so/6b24)\n- [Developer Docs](https://docs.dendron.so/)"},"collectionChildren":null,"customHeadContent":null,"config":{"version":5,"dev":{"enablePreviewV2":true,"enableSelfContainedVaults":true},"commands":{"lookup":{"note":{"selectionMode":"extract","confirmVaultOnCreate":true,"vaultSelectionModeOnCreate":"smart","leaveTrace":false,"bubbleUpCreateNew":true,"fuzzThreshold":0.2}},"randomNote":{},"insertNoteLink":{"aliasMode":"none","enableMultiSelect":false},"insertNoteIndex":{"enableMarker":false},"copyNoteLink":{"aliasMode":"title"},"templateHierarchy":"template"},"workspace":{"vaults":[{"fsPath":".","selfContained":true,"name":"docs"}],"journal":{"dailyDomain":"daily","name":"journal","dateFormat":"y.MM.dd","addBehavior":"childOfDomain"},"scratch":{"name":"scratch","dateFormat":"y.MM.dd.HHmmss","addBehavior":"asOwnDomain"},"task":{"name":"task","dateFormat":"y.MM.dd","addBehavior":"asOwnDomain","statusSymbols":{"":" ","wip":"w","done":"x","assigned":"a","moved":"m","blocked":"b","delegated":"l","dropped":"d","pending":"y"},"taskCompleteStatus":["done","x"],"prioritySymbols":{"H":"high","M":"medium","L":"low"},"todoIntegration":false,"createTaskSelectionType":"selection2link"},"graph":{"zoomSpeed":1,"createStub":false},"enableAutoCreateOnDefinition":false,"enableXVaultWikiLink":false,"enableRemoteVaultInit":true,"enableUserTags":true,"enableHashTags":true,"workspaceVaultSyncMode":"noCommit","enableAutoFoldFrontmatter":false,"enableEditorDecorations":true,"maxPreviewsCached":10,"maxNoteLength":204800,"enableFullHierarchyNoteTitle":false,"enablePersistentHistory":false},"preview":{"enableFMTitle":true,"enableNoteTitleForLink":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enablePrettyRefs":true,"enableKatex":true,"automaticallyShowPreview":false},"publishing":{"enableFMTitle":true,"enableNoteTitleForLink":true,"enablePrettyRefs":true,"enableKatex":true,"copyAssets":true,"siteHierarchies":["root"],"writeStubs":false,"siteRootDir":"docs","seo":{"title":"Dendron","description":"Personal Knowledge Space"},"github":{"enableEditLink":true,"editLinkText":"Edit this page on GitHub","editBranch":"main","editViewMode":"tree"},"enableSiteLastModified":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enableRandomlyColoredTags":true,"enableTaskNotes":true,"enablePrettyLinks":true,"searchMode":"search","theme":"dark","assetsPrefix":"/notes","siteUrl":"https://julian9925.github.io","siteFaviconPath":"favicon.ico","siteIndex":"root"}}},"__N_SSG":true},"page":"/notes/[id]","query":{"id":"vwhv555f54cvwxj7cpob0zj"},"buildId":"HQStjr3JeRiFw6c07KJ2P","assetPrefix":"/notes","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

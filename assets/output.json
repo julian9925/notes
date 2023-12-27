@@ -1,0 +1,233 @@
+{
+  "AuthenticanStore": {
+    "Anonymous": [
+      "login",
+      "logout",
+      "checkPasswordChangeRequired"
+    ]
+  },
+  "GlobalStore": {
+    "Anonymous": [
+      "getBmcTime",
+      "getSystemInfo"
+    ]
+  },
+  "AssemblyStore": {
+    "Anonymous": [
+      "getAssemblyInfo",
+      "updateIdentifyLedValue"
+    ]
+  },
+  "BmcStore": {
+    "Anonymous": [
+      "getBmcInfo",
+      "updateIdentifyLedValue"
+    ]
+  },
+  "ChassisStore": {
+    "Anonymous": [
+      "getChassisInfo",
+      "updateIdentifyLedValue"
+    ]
+  },
+  "FanStore": {
+    "Anonymous": [
+      "getFanInfo"
+    ]
+  },
+  "MemoryStore": {
+    "Anonymous": [
+      "getDimms",
+      "updateIdentifyLedValue"
+    ]
+  },
+  "PowerSupplyStore": {
+    "Anonymous": [
+      "getChassisCollection",
+      "getAllPowerSupplies",
+      "getChassisPower"
+    ]
+  },
+  "ProcessorStore": {
+    "Anonymous": [
+      "getProcessorsInfo",
+      "updateIdentifyLedValue"
+    ]
+  },
+  "SensorsStore": {
+    "Anonymous": [
+      "getAllSensors",
+      "getChassisCollection",
+      "getSensors",
+      "getThermalSensors",
+      "getPowerSensors"
+    ]
+  },
+  "ServerLedStore": {
+    "Anonymous": [
+      "getIndicatorLedActiveState",
+      "saveIndicatorLedActiveState"
+    ]
+  },
+  "SystemStore": {
+    "Anonymous": [
+      "getSystem",
+      "changeIdentifyLedState"
+    ]
+  },
+  "DumpsStore": {
+    "Anonymous": [
+      "getBmcDumpEntries",
+      "getSystemDumpEntries",
+      "getAllDumps",
+      "createBmcDump",
+      "createSystemDump",
+      "deleteDumps",
+      "deleteAllDumps"
+    ]
+  },
+  "EventLogStore": {
+    "Anonymous": [
+      "getEventLogData",
+      "deleteAllEventLogs",
+      "deleteEventLogs",
+      "resolveEventLogs",
+      "unresolveEventLogs",
+      "updateEventLogStatus"
+    ]
+  },
+  "PostCodeLogsStore": {
+    "Anonymous": [
+      "getPostCodesLogData"
+    ]
+  },
+  "BootSettingsStore": {
+    "Anonymous": [
+      "getBootSettings",
+      "saveBootSettings",
+      "getTpmPolicy",
+      "saveTpmPolicy",
+      "saveSettings"
+    ]
+  },
+  "ControlStore": {
+    "Anonymous": [
+      "getLastPowerOperationTime",
+      "getLastBmcRebootTime",
+      "rebootBmc",
+      "serverPowerChange"
+    ]
+  },
+  "FactoryResetStore": {
+    "Anonymous": [
+      "resetToDefaults",
+      "resetBios"
+    ]
+  },
+  "FirmwareStore": {
+    "Anonymous": [
+      "getActiveBmcFirmware",
+      "getActiveHostFirmware",
+      "getFirmwareInventory",
+      "getUpdateServiceSettings",
+      "setApplyTimeImmediate",
+      "uploadFirmware",
+      "uploadFirmwareTFTP",
+      "switchBmcFirmwareAndReboot"
+    ]
+  },
+  "KeyClearStore": {
+    "Anonymous": [
+      "clearEncryptionKeys"
+    ]
+  },
+  "VirtualMediaStore": {
+    "Anonymous": [
+      "getData",
+      "mountImage",
+      "unmountImage"
+    ]
+  },
+  "PowerControlStore": {
+    "Anonymous": [
+      "getChassisCollection",
+      "getPowerControl",
+      "setPowerControl"
+    ]
+  },
+  "CertificatesStore": {
+    "Anonymous": [
+      "getCertificates",
+      "addNewCertificate",
+      "replaceCertificate",
+      "deleteCertificate",
+      "generateCsr"
+    ]
+  },
+  "LdapStore": {
+    "Anonymous": [
+      "getAccountSettings",
+      "saveLdapSettings",
+      "saveActiveDirectorySettings",
+      "addNewRoleGroup",
+      "saveRoleGroup",
+      "deleteRoleGroup"
+    ]
+  },
+  "PoliciesStore": {
+    "Anonymous": [
+      "getNetworkProtocolStatus",
+      "getBiosStatus",
+      "saveIpmiProtocolState",
+      "saveSshProtocolState",
+      "saveRtadState",
+      "saveVtpmState"
+    ]
+  },
+  "SessionsStore": {
+    "Anonymous": [
+      "getSessionsData",
+      "disconnectSessions"
+    ]
+  },
+  "UserManagementStore": {
+    "Anonymous": [
+      "getUsers",
+      "getAccountSettings",
+      "getAccountRoles",
+      "createUser",
+      "updateUser",
+      "deleteUser",
+      "deleteUsers",
+      "enableUsers",
+      "disableUsers",
+      "saveAccountSettings"
+    ]
+  },
+  "DateTimeStore": {
+    "Anonymous": [
+      "getNtpData",
+      "updateDateTime"
+    ]
+  },
+  "NetworkStore": {
+    "Anonymous": [
+      "getEthernetData",
+      "saveDomainNameState",
+      "saveDnsState",
+      "saveNtpState",
+      "saveIpv4Address",
+      "editIpv4Address",
+      "saveSettings",
+      "saveDnsAddress",
+      "editDnsAddress"
+    ]
+  },
+  "PowerPolicyStore": {
+    "Anonymous": [
+      "getPowerRestorePolicies",
+      "getPowerRestoreCurrentPolicy",
+      "setPowerRestorePolicy"
+    ]
+  }
+}
